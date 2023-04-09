@@ -54,8 +54,7 @@ public class App {
             new String[] {"c", "a", "c", "c", "d", "a", "b", "d"}
             );
 
-
         JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/8 perguntas");
-
+        System.out.println("lalala");
     }
 }
