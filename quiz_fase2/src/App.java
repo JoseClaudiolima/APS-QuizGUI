@@ -55,7 +55,6 @@ public class App {
             );
 
         JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/8 perguntas");
-        System.out.println("lalala"); 
-        System.out.println("lelelele");
+       
     }
 }
