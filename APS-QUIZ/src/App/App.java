@@ -7,7 +7,8 @@ import textos.Questoes;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        String nome = JOptionPane.showInputDialog(null, "Insira o seu nome para começar");
+        // Mostrará uma interface, introduzindo o usuário ao programa.
+        String nome = JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza.");
         JOptionPane.showMessageDialog(null, "Olá " + nome + ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!");
 
 
@@ -16,6 +17,7 @@ public class App {
         Conferencia validador = new Conferencia();
         Pontuador pontuador = new Pontuador();
 
+        // Em cada uma das questões, mostrará uma interfarce e verificará se o usuário errou ou acertou.
         String questao1  = JOptionPane.showInputDialog(null, questoes.pergunta1());
         validador.validarResposta("c", questao1);
         
@@ -48,14 +50,12 @@ public class App {
         validador.validarResposta("d", questao8);
        
 
-
+        // Armazenará as respostas do usuário, para contabilizar quantos acertos teve.
         int pontuadorTotal = pontuador.pontuacao(
             new String[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8 },
             new String[] {"c", "a", "c", "c", "d", "a", "b", "d"}
             );
 
         JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/8 perguntas");
-        System.out.println("lalala"); 
-        System.out.println("lelelele");
     }
 }

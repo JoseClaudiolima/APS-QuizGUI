@@ -2,7 +2,7 @@ package textos;
 
 public class Questoes {
 
-    // Aqui estao armazenadas todas as perguntas do quiz
+    // Aqui estao armazenadas todas as perguntas do quiz.
     public String[][] todasPerguntasArray = {
         {"1) A Lei da Política Nacional do Meio Ambiente tem por objetivo:\n"
         + "\na) Fiscalizar a utilização da coleta seletiva nos bairros\n"
@@ -60,7 +60,7 @@ public class Questoes {
         +"d) Todas as anteriores"},
     };
         
-
+    // Esses metódos retornarão a pergunta da questão que for desejada.
     public String pergunta1(){
         return todasPerguntasArray[0][0];
     };
