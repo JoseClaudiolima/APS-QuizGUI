@@ -4,60 +4,98 @@ public class Questoes {
 
     // Aqui estao armazenadas todas as perguntas do quiz.
     public String[][] todasPerguntasArray = {
-        {"1) A Lei da Política Nacional do Meio Ambiente tem por objetivo:\n"
-        + "\na) Fiscalizar a utilização da coleta seletiva nos bairros\n"
-        + "b)Controle potencial da emissão de gases em industrias de grande porte\n"
-        + "c) Incentivar o estudo ás questões ambientais e o uso da tecnologia em prol delas\n"
-        +"d) Nenhuma das opções"},
+        /*"c", "a", "c", "c", "d", "a", "b", "d", "b", "a", "c" */
+        {"(QUESTÃO FÁCIL) 1- Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.
+        O vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n"
+        + "\na) ~1500 anos.\n"
+        + "b) ~3000 anos.\n"
+        + "c) ~4000 anos.\n"
+        +"d) Nenhuma das opções."},
 
         
-        {"2) Qual das gestões apresentadas é responsável pela administração do exercício de atividades econômicas e sociais na utilização de recursos naturais?\n"
-        + "\na) Gestão de recursos ambientais\n"
-        + "b) Gestão política\n"
-        + "c) Gestão ecológica\n"
-        +"d) Nenhuma das opções"},
+        {"(QUESTÃO FÁCIL) 2- Sabia que houve uma conferência da ONU sediada no Rio de Janeiro em 1992 sobre o meio ambiente?
+        Pois é, a Eco – 92, ou Rio – 92, foi um marco no esforço global pelo meio ambiente, e dela nasceu um documento importante cheio de normas ambientais, que foi...\n"
+        + "\na) Agenda 21.\n"
+        + "b) O Manifesto Ambiental.\n"
+        + "c) Manifesto – 92.\n"
+        +"d) Nenhuma das opções."},
 
         
-        {"3) Qual das opções abaixo é um exemplo de reciclagem?\n"
-        + "\na) Incineração\n"
-        + "b) Acumulo de matéria-prima\n"
-        + "c) Coleta Seletiva\n"
-        +"d) Todas as opções são exemplo de reciclagem"},
+        {"(QUESTÃO FÁCIL) 3- Mesmo o ser humano estando no topo da cadeia alimentar, é notório que não teríamos chance num duelo mano a mano contra diversos animais selvagens.
+        Muito poderiam facilmente esmagar ou lacerar membros apenas com a força da mordida! Causalidades de lado, qual destes animais você acha que tem a mordida mais forte?\n"
+        + "\na) Babuíno.\n"
+        + "b) Leão.\n"
+        + "c) Hiena.\n"
+        +"d) Lobo."},
 
         
-        {"4) Qual dos seguintes gases contribui para o efeito estufa?\n"   
-        + "\na) Oxigênio\n"
-        + "b) Dioxido de carbono\n"
-        + "c) Cloro flúor carboneto\n"
-        +"d) Vapor de sulfito"},
+        {"(QUESTÃO FÁCIL) 4- Lugar de lixo é no lixo. O descarte inadequado acarreta em complicações diversas, como a contaminação do solo e dos lençóis freáticos, porções de água limpa que percorrem
+        o subsolo, incluindo aquíferos, além de problemas para flora e a fauna,
+        como os recifes de corais e os animais aquáticos que sofrem com a poluição dos mares. Uma ação pode começar de baixo com o simples ato de jogar o seu lixo no lugar adequado,
+        e você sabe que lugar é esse? Quais as cores referentes aos tipos de lixo plásticos, metais, vidros, orgânicos e papéis, respectivamente? \n"   
+        + "\na) Vermelho, Amarelo, verde, azul e marrom\n"
+        + "b) Amarelo, vermelho, marrom, azul e verde.\n"
+        + "c) Vermelho, amarelo, verde, marrom e azul.\n"
+        +"d) Marrom, azul, vermelho, amarelo e verde"},
 
         
-        {"5) O que é coleta seletiva?\n"
-        + "\na) Destinação de resíduos para lixões e aterros\n"
-        + "b) A escolha aleatória do melhor lixo produzido\n"
-        + "c) Processo de envio de todo lixo produzido para cooperativas ou entrega para catadores de rua\n"
-        +"d) Processo de separação e recolhimento dos resíduos para o reaproveitamento por meio de reciclagem"},
+        {"(QUESTÃO MÉDIA) 5- Dizem que o efeito estufa é balela... Eu sei, parece bobo achar isso né? Até porque na nossa vizinhança estelar temos um ótimo exemplo
+        de como a Terra pode ficar se nada for feito a respeito. Então, qual seria ele?\n"
+        + "\na) Júpter.\n"
+        + "b) Marte.\n"
+        + "c) Mercúrio.\n"
+        +"d) Vênus."},
 
         
-        {"6) Qual das gestões apresentadas é responsável pela administração do exercício de atividades econômicas e sociais na utilização de recursos naturais?\n"
-        + "\na) Gestão de recursos ambientais\n"
-        + "b) Gestão política\n"
-        + "c) Gestão ecologica\n"
-        +"d) nenhuma das opções"},
+        {"(QUESTÃO MÉDIA) 6- Ozônio, um gás que você já deve ter ouvido falar por fazer parte de uma camada na atmosfera, e por estar com um buraco cada vez maior,
+        tem grande importância na absorção de raios UV – ultravioleta – danosos aos seres humanos, entre outras complicações. Mas afinal, o que é de fato o ozônio?\n"
+        + "\na) O³ - Oxigênio tri-atômico.\n"
+        + "b) H³ - Hidrogênio tri-atômico.\n"
+        + "c) CO - Monóxido de Carbono.\n"
+        +"d) N02 - Dióxido de Nitrogênio."},
 
         
-        {"7) O que é um “Ambiente Espoliado”?\n"
-        + "\na) Ambiente coberto de mata\n"
-        + "b) Ambiente que possui recursos naturais escassos por uso excessivo ilegalmente\n"
-        + "c) Ambiente ou faixa ambiental que possui multi características\n"
-        +"d) Ambiente originado de ações humanas"},
+        {"(QUESTÃO MÉDIA) 7- Plantas são a base da cadeia alimentar, e por isso é importante entender para cuidar e preservar a flora. As plantas sintetizam sua energia, ou seja,
+        produzem seu próprio alimento, através da captação da luz solar num processo químico. Parte da luz que não é absorvida é refletida na faixa de cor verde,
+        característica comum das folhas. Com isso, qual é o processo químico descrito e o que é responsável pela captação da luz solar?\n"
+        + "\na) Respiração e mitocôndria.\n"
+        + "b) Fotossíntese e clorofila. \n"
+        + "c) Síntese de proteínas e lipídeos.\n"
+        +"d) Nenhuma das anteriores."},
     
         
-        {"8) Uma das formas de colaborar com a preservação do meio ambiente é reduzir a produção de resíduos. Mas como?\n"
-        + "\na) Optando pela compra de produtos com embalagens recicláveis\n"
-        + "b) Reutilizando os materiais e objetos sempre que possível\n"
-        + "c) Apoiando iniciativas de reciclagem\n"
-        +"d) Todas as anteriores"},
+        {"(QUESTÃO MÉDIA) 8- Todos nós contribuímos indiretamente ou diretamente pra o efeito estufa, seja assistindo televisão, tomando banho, comendo um pacote de biscoito (bolacha?),
+        andando de carro... e por ai vai. Todas essas atividades envolveram ou envolvem de alguma forma alguma ação que agride o meio ambiente,
+        como o uso de combustíveis fósseis ou a poluição de lençóis freáticos, apenas consumindo. Para ajudar a conscientizar as pessoas em todas as feras,
+        criou-se um termo, que nos diz qual o nosso impacto no ambiental:\n"
+        + "\na) x\n"
+        + "b) x\n"
+        + "c) x\n"
+        +"d) Pegada de carbono."},
+
+        {"(QUESTÃO MÉDIA) 9- É de grande urgência que a humanidade trilhe um caminho mais limpo ao tratar de fontes energéticas. Opções não faltam! Dentre as que estão abaixo,
+        qual é a fonte de energia renovável considerada a mais limpa?\n"
+        + "\na) Eólica.\n"
+        + "b) Solar.\n"
+        + "c) Biomassa.\n"
+        +"d) Hidrelétrica."},
+
+        {"(QUESTÃO DIFÍCIL) 10- O efeito estufa, fenômeno de aquecimento acelerado da atmosfera terrestre, possui seus vilanescos causadores, os GEEs, ou gases do efeito estufa.
+        O maior contribuinte nasce do uso de combustíveis fósseis e atividade industrial, mas não é necessariamente o mais potente.
+        O segundo maior contribuinte é mais potente e advém principalmente da extração de petróleo, carvão e atividade pecuária com uso de animais ruminantes.
+        O terceiro maior culpado é ainda menos contribuinte e mais potente, fruto da atividade agrícola com uso de agrotóxicos e químicos no cultivo.
+        Dadas as informações, quais são esses 3 GEEs, respectivamente?\n"
+        + "\na) CO2 - Dióxido de Carbono; CH4 - Metano; N2O - Óxido Nitroso.\n"
+        + "b) x.\n"
+        + "c) x.\n"
+        +"d) x."},
+
+        {"(QUESTÃO DIFÍCIL) 11- Qual o nome do processo que descreve um escoamento de água na camada superficial do solo, causado por intensas chuvas,
+        que transporta os nutrientes do solo a áreas mais baixas, levando ao empobrecimento da terra? \n"
+        + "\na) x.\n"
+        + "b) x.\n"
+        + "c) Lixiviação.\n"
+        +"d) x."},
     };
         
     // Esses metódos retornarão a pergunta da questão que for desejada.
@@ -85,4 +123,14 @@ public class Questoes {
     public String pergunta8(){
         return todasPerguntasArray[7][0];
     };
+    public String pergunta9(){
+        return todasPerguntasArray[8][0];
+    };
+    public String pergunta10(){
+        return todasPerguntasArray[9][0];
+    };
+    public String pergunta11(){
+        return todasPerguntasArray[10][0];
+    };
+    
 }

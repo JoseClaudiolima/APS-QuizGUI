@@ -48,14 +48,23 @@ public class App {
 
         String questao8  = JOptionPane.showInputDialog(null, questoes.pergunta8());
         validador.validarResposta("d", questao8);
+
+        String questao9  = JOptionPane.showInputDialog(null, questoes.pergunta9());
+        validador.validarResposta("b", questao9);
+
+        String questao10  = JOptionPane.showInputDialog(null, questoes.pergunta10());
+        validador.validarResposta("a", questao10);
+
+        String questao11  = JOptionPane.showInputDialog(null, questoes.pergunta11());
+        validador.validarResposta("c", questao11);
        
 
         // Armazenará as respostas do usuário, para contabilizar quantos acertos teve.
         int pontuadorTotal = pontuador.pontuacao(
-            new String[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8 },
-            new String[] {"c", "a", "c", "c", "d", "a", "b", "d"}
+            new String[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11 },
+            new String[] {"c", "a", "c", "c", "d", "a", "b", "d", "b", "a", "c"}
             );
 
-        JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/8 perguntas");
+        JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");
     }
 }
