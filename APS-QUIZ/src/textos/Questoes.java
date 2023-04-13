@@ -36,7 +36,7 @@ public class Questoes {
         + "\na) Vermelho, Amarelo, verde, azul e marrom\n"
         + "b) Amarelo, vermelho, marrom, azul e verde.\n"
         + "c) Vermelho, amarelo, verde, marrom e azul.\n"
-        +"d) Marrom, azul, vermelho, amarelo e verde"},
+        +"d) Marrom, azul, vermelho, amarelo e verde."},
 
         
         {"(QUESTÃO MÉDIA) 5- Dizem que o efeito estufa é balela... Eu sei, parece bobo achar isso né? Até porque na nossa vizinhança estelar temos um ótimo exemplo
