@@ -68,9 +68,9 @@ public class Questoes {
         andando de carro... e por ai vai. Todas essas atividades envolveram ou envolvem de alguma forma alguma ação que agride o meio ambiente,
         como o uso de combustíveis fósseis ou a poluição de lençóis freáticos, apenas consumindo. Para ajudar a conscientizar as pessoas em todas as feras,
         criou-se um termo, que nos diz qual o nosso impacto no ambiental:\n"
-        + "\na) carbono zero.\n"
-        + "b) sustentabilidade.\n"
-        + "c) aspecto do carbono.\n"
+        + "\na) Carbono zero.\n"
+        + "b) Sustentabilidade.\n"
+        + "c) Aspecto do carbono.\n"
         +"d) Pegada de carbono."},
 
         {"(QUESTÃO MÉDIA) 9- É de grande urgência que a humanidade trilhe um caminho mais limpo ao tratar de fontes energéticas. Opções não faltam! Dentre as que estão abaixo,
