@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 import conferencia.Conferencia;
 import pontuador.Pontuador;
 import textos.Questoes;
-
+// testando o preconceito go github comigo
 public class App {
     public static void main(String[] args) throws Exception {
 
