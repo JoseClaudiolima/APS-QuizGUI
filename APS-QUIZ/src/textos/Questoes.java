@@ -68,49 +68,49 @@ public class Questoes {
 
         {"(QUESTÃO DIFÍCIL) 10- O efeito estufa, fenômeno de aquecimento acelerado da atmosfera terrestre, possui seus vilanescos causadores, os GEEs, ou gases do efeito estufa. O maior contribuinte nasce do uso de combustíveis fósseis e atividade industrial, mas não é necessariamente o mais potente. O segundo maior contribuinte é mais potente e advém principalmente da extração de petróleo, carvão e atividade pecuária com uso de animais ruminantes. O terceiro maior culpado é ainda menos contribuinte e mais potente, fruto da atividade agrícola com uso de agrotóxicos e químicos no cultivo. Dadas as informações, quais são esses 3 GEEs, respectivamente?\n"
         + "\na) CO2 - Dióxido de Carbono; CH4 - Metano; N2O - Óxido Nitroso.\n"
-        + "b) x.\n"
-        + "c) x.\n"
-        +"d) x."},
+        + "b) H2O - Água; O3 - Ozônio; CO - Monóxido de Carbono.\n"
+        + "c) SO2 - Dióxido de Enxofre; NH3 - Amônia; NOx - Óxidos de Nitrogênio.\n"
+        +"d) VOCs - Compostos Orgânicos Voláteis; HFCs - Hidrofluorocarbonetos; H2S - Sulfeto de Hidrogênio."},
 
         {"(QUESTÃO DIFÍCIL) 11- Qual o nome do processo que descreve um escoamento de água na camada superficial do solo, causado por intensas chuvas, que transporta os nutrientes do solo a áreas mais baixas, levando ao empobrecimento da terra? \n"
-        + "\na) x.\n"
-        + "b) x.\n"
+        + "\na) Osmose.\n"
+        + "b) Infiltração.\n"
         + "c) Lixiviação.\n"
-        +"d) x."},
+        +"d) Erosão."},
     };
         
     // Esses metódos retornarão a pergunta da questão que for desejada.
-    public String pergunta1(){
+    public String getPergunta1(){
         return todasPerguntasArray[0][0];
     };
-    public String pergunta2(){
+    public String getPergunta2(){
         return todasPerguntasArray[1][0];
     };
-    public String pergunta3(){
+    public String getPergunta3(){
         return todasPerguntasArray[2][0];
     };
-    public String pergunta4(){
+    public String getPergunta4(){
         return todasPerguntasArray[3][0];
     };
-    public String pergunta5(){
+    public String getPergunta5(){
         return todasPerguntasArray[4][0];
     };
-    public String pergunta6(){
+    public String getPergunta6(){
         return todasPerguntasArray[5][0];
     };
-    public String pergunta7(){
+    public String getPergunta7(){
         return todasPerguntasArray[6][0];
     };
-    public String pergunta8(){
+    public String getPergunta8(){
         return todasPerguntasArray[7][0];
     };
-    public String pergunta9(){
+    public String getPergunta9(){
         return todasPerguntasArray[8][0];
     };
-    public String pergunta10(){
+    public String getPergunta10(){
         return todasPerguntasArray[9][0];
     };
-    public String pergunta11(){
+    public String getPergunta11(){
         return todasPerguntasArray[10][0];
     };
     
