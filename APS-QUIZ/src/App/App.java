@@ -3,9 +3,15 @@ import javax.swing.JOptionPane;
 import conferencia.Conferencia;
 import pontuador.Pontuador;
 import textos.Questoes;
+import textos.Gui;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        Questoes questoes = new Questoes();
+        Conferencia validador = new Conferencia();
+        Pontuador pontuador = new Pontuador();
+        Gui caixaDePergunta = new Gui();
+
 
         // Mostrará uma interface, introduzindo o usuário ao programa.
         String nome = JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza.");
@@ -13,58 +19,57 @@ public class App {
 
 
 
-        Questoes questoes = new Questoes();
-        Conferencia validador = new Conferencia();
-        Pontuador pontuador = new Pontuador();
-
         // Em cada uma das questões, mostrará uma interfarce e verificará se o usuário errou ou acertou.
-        String questao1  = JOptionPane.showInputDialog(null, questoes.getPergunta1());
-        validador.validarResposta("c", questao1);
-        
-        
-        String questao2  = JOptionPane.showInputDialog(null, questoes.getPergunta2());
-        validador.validarResposta("a", questao2);
+        int questao1  = caixaDePergunta.getGui(questoes.getPergunta1(), "pergunta 1");
+        validador.validarResposta(2, questao1);
         
 
-        String questao3  = JOptionPane.showInputDialog(null, questoes.getPergunta3());
-        validador.validarResposta("c", questao3);
+        int questao2  = caixaDePergunta.getGui(questoes.getPergunta2(), "pergunta 2");
+        validador.validarResposta(0, questao2);
+
+
+        int questao3  = caixaDePergunta.getGui(questoes.getPergunta3(), "pergunta 3");
+        validador.validarResposta(2, questao3);
       
 
-        String questao4  = JOptionPane.showInputDialog(null, questoes.getPergunta4());
-        validador.validarResposta("c", questao4);
+        int questao4  = caixaDePergunta.getGui(questoes.getPergunta4(), "pergunta 4");
+        validador.validarResposta(2, questao4);
       
 
-        String questao5  = JOptionPane.showInputDialog(null, questoes.getPergunta5());
-        validador.validarResposta("d", questao5);
+        int questao5  = caixaDePergunta.getGui(questoes.getPergunta5(), "pergunta 5");
+        validador.validarResposta(3, questao5);
       
 
-        String questao6  = JOptionPane.showInputDialog(null, questoes.getPergunta6());
-        validador.validarResposta("a", questao6);
+        int questao6  = caixaDePergunta.getGui(questoes.getPergunta6(), "pergunta 6");
+        validador.validarResposta(0, questao6);
         
 
-        String questao7  = JOptionPane.showInputDialog(null, questoes.getPergunta7());
-        validador.validarResposta("b", questao7);
+        int questao7  = caixaDePergunta.getGui(questoes.getPergunta7(), "pergunta 7");
+        validador.validarResposta(1, questao7);
        
 
-        String questao8  = JOptionPane.showInputDialog(null, questoes.getPergunta8());
-        validador.validarResposta("d", questao8);
+        int questao8  = caixaDePergunta.getGui(questoes.getPergunta8(), "pergunta 8");
+        validador.validarResposta(3, questao8);
 
-        String questao9  = JOptionPane.showInputDialog(null, questoes.getPergunta9());
-        validador.validarResposta("b", questao9);
 
-        String questao10  = JOptionPane.showInputDialog(null, questoes.getPergunta10());
-        validador.validarResposta("a", questao10);
+        int questao9  = caixaDePergunta.getGui(questoes.getPergunta9(), "pergunta 9");
+        validador.validarResposta(1, questao9);
 
-        String questao11  = JOptionPane.showInputDialog(null, questoes.getPergunta11());
-        validador.validarResposta("c", questao11);
+
+        int questao10  = caixaDePergunta.getGui(questoes.getPergunta10(), "pergunta 10");
+        validador.validarResposta(0, questao10);
+        
+
+        int questao11  = caixaDePergunta.getGui(questoes.getPergunta11(), "pergunta 11");
+        validador.validarResposta(2, questao11);
        
 
         // Armazenará as respostas do usuário, para contabilizar quantos acertos teve.
         int pontuadorTotal = pontuador.pontuacao(
-            new String[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11 },
-            new String[] {"c", "a", "c", "c", "d", "a", "b", "d", "b", "a", "c"}
+            new int[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11 },
+            new int[] {2, 0, 2, 2, 3, 0, 1, 3, 1, 0, 2}
             );
-
+        
         JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");
     }
 }
