@@ -1,12 +1,18 @@
 package textos;
 
 import javax.swing.JOptionPane;
+import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 
 public class Gui {
     // Classse criada para a estrturação da gui do projeto
     public int getGui (String pergunta, String titulo) {
         String[] escolhas = {"A", "B", "C", "D"};
-
+        
+        // Cria uma imagem transparente, pois substituindo o icone padrão por esse transparente a interface não mostrará icone algum.
+        BufferedImage image = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+        ImageIcon icon = new ImageIcon(image);
+        
         return 
         JOptionPane.showOptionDialog(
         null,  // componente pai
@@ -14,7 +20,7 @@ public class Gui {
         titulo,  // título da janela
         JOptionPane.YES_NO_OPTION,  // tipo da janela
         JOptionPane.QUESTION_MESSAGE,  // tipo da mensagem
-        null,  // icone da janela
+        icon,  // pegará o icone transparente
         escolhas,  // opções
         escolhas[0]  // opção selecionada por padrão
         );  
