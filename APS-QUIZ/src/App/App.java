@@ -1,9 +1,5 @@
 import javax.swing.JOptionPane;
 
-
-
-
-
 import conferencia.Conferencia;
 import pontuador.Pontuador;
 import textos.Questoes;
@@ -30,6 +26,7 @@ public class App {
         
         
         int questao2  = Interface.getQuestão(questoes.getPergunta(1), "pergunta 2",questoes.getDica(1));
+        questao2 = Interface.getAlternativas(questoes.getAlternativa(1,0), questoes.getAlternativa(1,1), questoes.getAlternativa(1,2), questoes.getAlternativa(1,3), questoes.getPergunta(1));
         validador.validarResposta(0, questao2);
 
         /*
@@ -72,7 +69,7 @@ public class App {
         // Armazenará as respostas do usuário, para contabilizar quantos acertos teve.
         int pontuadorTotal = pontuador.pontuacao(
             new int[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11 },
-            new int[] {2, 0, 2, 2, 3, 0, 1, 3, 1, 0, 2}
+            new int[] {2, 0, 2, 3, 1, 3, 1, 0, 1, 0, 2, 3, 0, 0, 2, 1, 0, 2, 3, 2, 0, 1, 1, 0, 3, 2, 1, 2, 1, 3}
             );
         
         JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");

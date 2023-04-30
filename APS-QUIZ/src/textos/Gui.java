@@ -49,7 +49,7 @@ public class Gui {
 
         return 0;
 
-        /*
+        /* comentar futuramente se apaga esse comentário ou não.
         Para criar um OptionDialog é preciso criar uma array, e o conteudo dessa array vai aparecer como as opções da caixa de dialogo.
         
         
