@@ -3,19 +3,11 @@ package textos;
 public class Questoes {
 
     // Aqui estao armazenadas todas as perguntas do quiz.
-    public String[] todasPerguntasArray = {
-        "(QUESTÃO FÁCIL) \n1- Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n"
-        + "\na) ~1500 anos.\n"
-        + "b) ~3000 anos.\n"
-        + "c) ~4000 anos.\n"
-        +"d) Nenhuma das opções.",
+    private String[] todasPerguntas = {
+        "(QUESTÃO FÁCIL) \n1- Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
 
         
-        "(QUESTÃO FÁCIL) \n2- Sabia que houve uma conferência da ONU sediada no Rio de Janeiro em 1992 sobre o meio ambiente? Pois é, a Eco – 92, ou Rio – 92, foi\num marco no esforço global pelo meio ambiente, e dela nasceu um documento importante cheio de normas ambientais, que foi...\n"
-        + "\na) Agenda 21.\n"
-        + "b) O Manifesto Ambiental.\n"
-        + "c) Manifesto – 92.\n"
-        +"d) Nenhuma das opções.",
+        "2- Mesmo sendo tão importante, o ser humano insiste em destruir um patrimônio tão relevante para o mundo: a floresta.\nO desmatamento de áreas florestais é algo que acompanha o Brasil há séculos, e persiste forte até os dias atuais.\nNa época pré-colonial, quando a economia engatinhava por aqui, o desmatamento começava a engatinhar igualmente, para fins econômicos e ocupacionais.\nQual foi o primeiro artigo a ser extraído?",
 
         
         "(QUESTÃO FÁCIL) \n3- Mesmo o ser humano estando no topo da cadeia alimentar, é notório que não teríamos chance num duelo mano a mano contra diversos animais selvagens.\nMuito poderiam facilmente esmagar ou lacerar membros apenas com a força da mordida! Causalidades de lado, qual destes animais você acha que tem a \nmordida mais forte?\n"
@@ -77,40 +69,35 @@ public class Questoes {
         + "c) Lixiviação.\n"
         +"d) Erosão."
     };
+    
+    private String[][] todasAlternativas = {
+        {"~ 1500 anos", "~ 3000 anos", "~ 4000 anos", "Nenhuma das anteriores"},
+        {"Pau-Brasil", "Cana-de-Açúcar", "Melaço", "Ouro"},
+        {},
         
-    // Esses metódos retornarão a pergunta da questão que for desejada.
-    public String getPergunta1(){
-        return todasPerguntasArray[0];
     };
-    public String getPergunta2(){
-        return todasPerguntasArray[1];
+    
+    
+    private String[] todasDicas = {
+        "O vidro é decomposto por ação do tempo, não põe microrganismos, e isso demora...",
+        "Produto agrícola que caracterizou a país, foi uma alternativa econômica aos portugueses que não encontraram nada muito interessante por aqui\nem sua primeira visita, nada como as especiarias orientais.\nPosteriormente a cana-de-açúcar se tornou o foco das atividades agrícolas.",
+        "",
+        "",
     };
-    public String getPergunta3(){
-        return todasPerguntasArray[2];
+    
+    
+    
+    public String getDica(int numeroDica){
+    return todasDicas[numeroDica]; 
+    }
+        
+    // Esse metódo retornará a pergunta da questão que for desejada.
+    public String getPergunta(int numeroPergunta){
+        return todasPerguntas[numeroPergunta];
     };
-    public String getPergunta4(){
-        return todasPerguntasArray[3];
-    };
-    public String getPergunta5(){
-        return todasPerguntasArray[4];
-    };
-    public String getPergunta6(){
-        return todasPerguntasArray[5];
-    };
-    public String getPergunta7(){
-        return todasPerguntasArray[6];
-    };
-    public String getPergunta8(){
-        return todasPerguntasArray[7];
-    };
-    public String getPergunta9(){
-        return todasPerguntasArray[8];
-    };
-    public String getPergunta10(){
-        return todasPerguntasArray[9];
-    };
-    public String getPergunta11(){
-        return todasPerguntasArray[10];
+
+    public String getAlternativa(int numeroQuestão,int letraAlternativa){
+        return todasAlternativas[numeroQuestão][letraAlternativa];
     };
     
 }

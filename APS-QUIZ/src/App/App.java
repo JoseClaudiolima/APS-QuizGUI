@@ -1,5 +1,9 @@
 import javax.swing.JOptionPane;
 
+
+
+
+
 import conferencia.Conferencia;
 import pontuador.Pontuador;
 import textos.Questoes;
@@ -10,33 +14,25 @@ public class App {
         Questoes questoes = new Questoes();
         Conferencia validador = new Conferencia();
         Pontuador pontuador = new Pontuador();
-        Gui caixaDePergunta = new Gui();
+        Gui Interface = new Gui();
 
 
         // Mostrará uma interface, introduzindo o usuário ao programa.
         String nome = JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza.");
         JOptionPane.showMessageDialog(null, "Olá " + nome + ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!");
 
-
-
+        
+        
         // Em cada uma das questões, mostrará uma interfarce e verificará se o usuário errou ou acertou.
-        int questao1  = caixaDePergunta.getGui(questoes.getPergunta1(), "pergunta 1");
-        // teste de dica
-        if (questao1 == 4){
-            JOptionPane.showMessageDialog(
-            null, //nao tem componente pai
-            "Mensagem de exemplo", //mensagem de texto na caixa de dialogo
-            "DICA", //titulo
-            JOptionPane.PLAIN_MESSAGE //tira o icone
-            );
-        }
+        int questao1  = Interface.getQuestão(questoes.getPergunta(0), "pergunta 1",questoes.getDica(0));        
+        questao1 = Interface.getAlternativas(questoes.getAlternativa(0,0), questoes.getAlternativa(0,1), questoes.getAlternativa(0,2), questoes.getAlternativa(0,3), questoes.getPergunta(0));
         validador.validarResposta(2, questao1);
         
-
-        int questao2  = caixaDePergunta.getGui(questoes.getPergunta2(), "pergunta 2");
+        
+        int questao2  = Interface.getQuestão(questoes.getPergunta(1), "pergunta 2",questoes.getDica(1));
         validador.validarResposta(0, questao2);
 
-
+        /*
         int questao3  = caixaDePergunta.getGui(questoes.getPergunta3(), "pergunta 3");
         validador.validarResposta(2, questao3);
       
@@ -80,5 +76,6 @@ public class App {
             );
         
         JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");
+        */
     }
 }
