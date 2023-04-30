@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 public class Gui {
     // Classse criada para a estrturação da gui do projeto
     public int getGui (String pergunta, String titulo) {
-        String[] escolhas = {"A", "B", "C", "D"};
+        String[] escolhas = {"A", "B", "C", "D", "Dica"};
         
         // Cria uma imagem transparente, pois substituindo o icone padrão por esse transparente a interface não mostrará icone algum.
         BufferedImage image = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);

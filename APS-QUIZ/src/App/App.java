@@ -21,6 +21,15 @@ public class App {
 
         // Em cada uma das questões, mostrará uma interfarce e verificará se o usuário errou ou acertou.
         int questao1  = caixaDePergunta.getGui(questoes.getPergunta1(), "pergunta 1");
+        // teste de dica
+        if (questao1 == 4){
+            JOptionPane.showMessageDialog(
+            null, //nao tem componente pai
+            "Mensagem de exemplo", //mensagem de texto na caixa de dialogo
+            "DICA", //titulo
+            JOptionPane.PLAIN_MESSAGE //tira o icone
+            );
+        }
         validador.validarResposta(2, questao1);
         
 
