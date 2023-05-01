@@ -19,60 +19,57 @@ public class App {
 
         
         
-        // Em cada uma das questões, mostrará uma interfarce e verificará se o usuário errou ou acertou.
-        int questao1  = Interface.getQuestão(questoes.getPergunta(0), "pergunta 1",questoes.getDica(0));        
-        questao1 = Interface.getAlternativas(questoes.getAlternativa(0,0), questoes.getAlternativa(0,1), questoes.getAlternativa(0,2), questoes.getAlternativa(0,3), questoes.getPergunta(0));
-        validador.validarResposta(2, questao1);
-        
-        
-        int questao2  = Interface.getQuestão(questoes.getPergunta(1), "pergunta 2",questoes.getDica(1));
-        questao2 = Interface.getAlternativas(questoes.getAlternativa(1,0), questoes.getAlternativa(1,1), questoes.getAlternativa(1,2), questoes.getAlternativa(1,3), questoes.getPergunta(1));
-        validador.validarResposta(0, questao2);
-
-        /*
-        int questao3  = caixaDePergunta.getGui(questoes.getPergunta3(), "pergunta 3");
-        validador.validarResposta(2, questao3);
-      
-
-        int questao4  = caixaDePergunta.getGui(questoes.getPergunta4(), "pergunta 4");
-        validador.validarResposta(2, questao4);
-      
-
-        int questao5  = caixaDePergunta.getGui(questoes.getPergunta5(), "pergunta 5");
-        validador.validarResposta(3, questao5);
-      
-
-        int questao6  = caixaDePergunta.getGui(questoes.getPergunta6(), "pergunta 6");
-        validador.validarResposta(0, questao6);
+        // Aqui será armazenado as futuras respostas do usuário, para contabilizar quantos acertos teve.
+        int[] respUsuario = new int[30];
         
 
-        int questao7  = caixaDePergunta.getGui(questoes.getPergunta7(), "pergunta 7");
-        validador.validarResposta(1, questao7);
+
+        
+        //Mostrará 5 questões com o titulo: "Dificuldade: fácil"
+        //Não finalizado
+        int contador = 0;
+        while (contador <5){
+            int questao  = Interface.getQuestão(questoes.getPergunta(contador), "Dificuldade: Fácil",questoes.getDica(contador));
+            questao = Interface.getAlternativas(questoes.getAlternativaIsolada(contador,0), questoes.getAlternativaIsolada(contador,1), questoes.getAlternativaIsolada(contador,2), questoes.getAlternativaIsolada(contador,3), questoes.getPergunta(contador),"Dificuldade: Fácil");
+            
+            respUsuario[contador] = questao;
+            
+            validador.validarResposta(pontuador.getSolucaoIndividual(contador), questao);
+            contador ++;
+        }
+        
+        //Mostrará 5 questões com o titulo: "Dificuldade: Média"
+        //Não finalizado
+        while (contador <10){
+            int questao  = Interface.getQuestão(questoes.getPergunta(contador), "Dificuldade: Média",questoes.getDica(contador));
+            questao = Interface.getAlternativas(questoes.getAlternativaIsolada(contador,0), questoes.getAlternativaIsolada(contador,1), questoes.getAlternativaIsolada(contador,2), questoes.getAlternativaIsolada(contador,3), questoes.getPergunta(contador),"Dificuldade: Média");
+            
+            respUsuario[contador] = questao;
+            
+            validador.validarResposta(pontuador.getSolucaoIndividual(contador), questao);
+            contador ++;
+        }
+        
+        //Mostrará 5 questões com o titulo: "Dificuldade: Dificil"     
+        //Não finalizado        
+        while (contador <15){
+            int questao  = Interface.getQuestão(questoes.getPergunta(contador), "Dificuldade: Dificil",questoes.getDica(contador));
+            questao = Interface.getAlternativas(questoes.getAlternativaIsolada(contador,0), questoes.getAlternativaIsolada(contador,1), questoes.getAlternativaIsolada(contador,2), questoes.getAlternativaIsolada(contador,3), questoes.getPergunta(contador),"Dificuldade: Dificil");
+            
+            respUsuario[contador] = questao;
+            
+            validador.validarResposta(pontuador.getSolucaoIndividual(contador), questao);
+            contador ++;
+        }
+
+        
+            
+        //Mensagem de despedida dizendo a quantidade de acertos.
+        //Não finalizado.
+        //Pensar na lógica para saber quantos acertaram, uma vez que cada questão é aleatória fica mais dificil de contabilizar.
+        //Talvez, reutilizar os acertos mostrados na hora seja a melhor opção.
+        //JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");
+        
        
-
-        int questao8  = caixaDePergunta.getGui(questoes.getPergunta8(), "pergunta 8");
-        validador.validarResposta(3, questao8);
-
-
-        int questao9  = caixaDePergunta.getGui(questoes.getPergunta9(), "pergunta 9");
-        validador.validarResposta(1, questao9);
-
-
-        int questao10  = caixaDePergunta.getGui(questoes.getPergunta10(), "pergunta 10");
-        validador.validarResposta(0, questao10);
-        
-
-        int questao11  = caixaDePergunta.getGui(questoes.getPergunta11(), "pergunta 11");
-        validador.validarResposta(2, questao11);
-       
-
-        // Armazenará as respostas do usuário, para contabilizar quantos acertos teve.
-        int pontuadorTotal = pontuador.pontuacao(
-            new int[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11 },
-            new int[] {2, 0, 2, 3, 1, 3, 1, 0, 1, 0, 2, 3, 0, 0, 2, 1, 0, 2, 3, 2, 0, 1, 1, 0, 3, 2, 1, 2, 1, 3}
-            );
-        
-        JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");
-        */
     }
 }

@@ -4,7 +4,7 @@ public class Questoes {
 
     // Aqui estao armazenadas todas as perguntas do quiz.
     private String[] todasPerguntas = {
-        "(QUESTÃO FÁCIL) \n1- Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
+    /*Fáceis*/"1- Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
 
         "2- Mesmo sendo tão importante, o ser humano insiste em destruir um patrimônio tão relevante para o mundo: a floresta.\nO desmatamento de áreas florestais é algo que acompanha o Brasil há séculos, e persiste forte até os dias atuais.\nNa época pré-colonial, quando a economia engatinhava por aqui, o desmatamento começava a engatinhar igualmente, para fins econômicos e ocupacionais.\nQual foi o primeiro artigo a ser extraído?",
 
@@ -24,7 +24,7 @@ public class Questoes {
 
         "10- A natureza é repleta de coisas incríveis e até malucas. Você já deve ter ouvido falar de tartarugas que vivem mais que humanos\ne árvores que vivem mais de um milênio! Na esfera da fauna, você sabe dizer qual é o animal vivo mais velho que se tem conhecimento?",
 
-        "(QUESTÃO INTERMEDIÁRIO) \n11° Dizem que o efeito estufa é balela... Eu sei, parece bobo achar isso né? Até porque na nossa vizinhança estelar temos um ótimo exemplo\nde como a Terra pode ficar se nada for feito a respeito. Então, qual seria ele?",
+    /*Médias*/"11- Dizem que o efeito estufa é balela... Eu sei, parece bobo achar isso né? Até porque na nossa vizinhança estelar temos um ótimo exemplo\nde como a Terra pode ficar se nada for feito a respeito. Então, qual seria ele?",
         
         "12- Ozônio, um gás que você já deve ter ouvido falar por fazer parte de uma camada na atmosfera, e por estar com um buraco cada vez maior,\ntem grande importância na absorção de raios UV – ultravioleta – danosos aos seres humanos, entre outras complicações.\nMas afinal, o que é de fato o ozônio?",
         
@@ -42,7 +42,7 @@ public class Questoes {
         
         "19- Desertos são biomas naturais que você deve conhecer muito bem por serem quentes de dia, frios de noite e repletos de dunas de areia.\nDificilmente vivenciaríamos um cenário pós-apocalíptico num deserto caso a humanidade ruísse, mas o efeito estufa pode contribuir\nnegativamente na desertificação de novos lugares ou na mudança de desertos já estabelecidos, sendo ambas as situações muito ruins.\nCom isso dito, você sabe dizer qual é o maior deserto terrestre do globo?",
         
-        "(QUESTÃO DIFICIL) \n20° E eu não falo que a natureza não para de impressionar? Tantos acontecimentos que nos deixam perplexos que não sei nem por onde começar. Na verdade,\neu sei sim, e quero saber se você sabe qual o animal mais resistente do planeta Terra.\nEstamos falando de ambientes extremos meu caro, ou minha cara.",
+    /*Dificil*/"20- E eu não falo que a natureza não para de impressionar? Tantos acontecimentos que nos deixam perplexos que não sei nem por onde começar. Na verdade,\neu sei sim, e quero saber se você sabe qual o animal mais resistente do planeta Terra.\nEstamos falando de ambientes extremos meu caro, ou minha cara.",
         
         "21- O efeito estufa, fenômeno de aquecimento acelerado da atmosfera terrestre, possui seus vilanescos causadores, os GEEs, ou gases do efeito estufa.\nO maior contribuinte nasce do uso de combustíveis fósseis e atividade industrial, mas não é necessariamente o mais potente. O segundo maior contribuinte\né mais potente e advém principalmente da extração de petróleo, carvão e atividade pecuária com uso de animais ruminantes. O terceiro maior culpado é\nainda menos contribuinte e mais potente, fruto da atividade agrícola com uso de agrotóxicos e químicos no cultivo.\nDadas as informações, quais são esses 3 GEEs, respectivamente?",
         
@@ -144,7 +144,7 @@ public class Questoes {
     };
 
     // Esse metódo retornará a alternativa da questão que for desejada.
-    public String getAlternativa(int numeroQuestão,int letraAlternativa){
+    public String getAlternativaIsolada(int numeroQuestão,int letraAlternativa){
         return todasAlternativas[numeroQuestão][letraAlternativa];
     };
     

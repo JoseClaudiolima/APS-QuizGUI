@@ -13,8 +13,6 @@ import javax.swing.JLabel;
 
 
 
-
-
 public class Gui {
     private int option;
     // Classse criada para a estrturação da gui do projeto
@@ -68,7 +66,7 @@ public class Gui {
          */
     }
 
-    public int getAlternativas(String a, String b, String c, String d,String questao){
+    public int getAlternativas(String a, String b, String c, String d,String questao, String titulo){
         
         // Cria um painel para os botões de opção e define o layout como BoxLayout com orientação vertical
         JPanel panel = new JPanel();
@@ -111,7 +109,7 @@ public class Gui {
         panel.add(option4);
 
         // Exibe um JOptionPane com os botões de opção e um botão "OK" para confirmar a seleção
-        int result = JOptionPane.showConfirmDialog(null, panel, "Opções",
+        int result = JOptionPane.showConfirmDialog(null, panel, titulo,
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
         // Verifica qual botão de opção foi selecionado e exibe uma mensagem correspondente
