@@ -2,7 +2,7 @@ package textos;
 
 public class Questoes {
 
-    // Aqui estao armazenadas todas as perguntas do quiz.
+    // Aqui estao armazenadas todas as perguntas do Quiz.
     private String[] todasPerguntas = {
     /*Fáceis*/"1- Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
 
@@ -65,6 +65,7 @@ public class Questoes {
         "30- A poluição de certos locais chega a ser tanto que o ar é turvo e respirá-lo por tempo demais chega a ser muito prejudicial à saúde.\nEstamos falando de cidades, nem sempre as maiores, mas com certeza as mais descompromissadas com o meio ambiente e o desenvolvimento sustentável.\nInfelizmente, exemplos não faltam. Dentre as opções abaixo, qual é atualmente a cidade mais poluída do mundo?"
     };
     
+    //Está armazenada todas as alternativas do Quiz.
     private String[][] todasAlternativas = {
    /*1*/{"~ 1500 anos", "~ 3000 anos", "~ 4000 anos", "Nenhuma das anteriores"},
         {"Pau-Brasil", "Cana-de-Açúcar", "Melaço", "Ouro"},
@@ -98,7 +99,7 @@ public class Questoes {
   /*30*/{"Cubatão, Brasil" , "Hotan, China" ,"Delhi, Índia" , "Lahore, Paquistão"},
     };
     
-    
+    //Abaixo, está armazenado todas as dicas de todas as Questões dos Quiz
     private String[] todasDicas = {
    /*1*/"O vidro é decomposto por ação do tempo, não põe microrganismos, e isso demora...",
         "Produto agrícola que caracterizou a país, foi uma alternativa econômica aos portugueses que não encontraram nada muito interessante por aqui\nem sua primeira visita, nada como as especiarias orientais.\nPosteriormente a cana-de-açúcar se tornou o foco das atividades agrícolas.",

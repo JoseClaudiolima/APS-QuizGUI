@@ -47,23 +47,6 @@ public class Gui {
 
         return 0;
 
-        /* comentar futuramente se apaga esse comentário ou não.
-        Para criar um OptionDialog é preciso criar uma array, e o conteudo dessa array vai aparecer como as opções da caixa de dialogo.
-        
-        
-         tipos de mensagem poder sem 
-            JOptionPane.ERROR_MESSAGE: mensagem de erro;
-            JOptionPane.INFORMATION_MESSAGE: mensagem informativa;
-            JOptionPane.WARNING_MESSAGE: mensagem de alerta;
-            JOptionPane.QUESTION_MESSAGE: mensagem de pergunta;
-            JOptionPane.PLAIN_MESSAGE: mensagem sem ícone.
-
-         tipos de janela podem ser
-            JOptionPane.DEFAULT_OPTION: janela com botões "Ok" e "Cancelar";
-            JOptionPane.YES_NO_OPTION: janela com botões "Sim" e "Não";
-            JOptionPane.YES_NO_CANCEL_OPTION: janela com botões "Sim", "Não" e "Cancelar";
-            JOptionPane.OK_CANCEL_OPTION: janela com botões "Ok" e "Cancelar".
-         */
     }
 
     public int getAlternativas(String a, String b, String c, String d,String questao, String titulo){
