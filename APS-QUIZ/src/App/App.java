@@ -4,6 +4,7 @@ import conferencia.Conferencia;
 import pontuador.Pontuador;
 import textos.Questoes;
 import textos.Gui;
+import Aleatorio.Aleatorio;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -11,68 +12,92 @@ public class App {
         Conferencia validador = new Conferencia();
         Pontuador pontuador = new Pontuador();
         Gui Interface = new Gui();
-
+        Aleatorio Aleatorizar = new Aleatorio();
 
         // Mostrará uma interface, introduzindo o usuário ao programa.
         String nome = JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza.");
-        JOptionPane.showMessageDialog(null, "Olá " + nome + ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!");
+        JOptionPane.showMessageDialog(null, "Olá " + nome
+                + ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!");
 
-        
-        
-        // Em cada uma das questões, mostrará uma interfarce e verificará se o usuário errou ou acertou.
-        int questao1  = Interface.getQuestão(questoes.getPergunta(0), "pergunta 1",questoes.getDica(0));        
-        questao1 = Interface.getAlternativas(questoes.getAlternativa(0,0), questoes.getAlternativa(0,1), questoes.getAlternativa(0,2), questoes.getAlternativa(0,3), questoes.getPergunta(0));
-        validador.validarResposta(2, questao1);
-        
-        
-        int questao2  = Interface.getQuestão(questoes.getPergunta(1), "pergunta 2",questoes.getDica(1));
-        questao2 = Interface.getAlternativas(questoes.getAlternativa(1,0), questoes.getAlternativa(1,1), questoes.getAlternativa(1,2), questoes.getAlternativa(1,3), questoes.getPergunta(1));
-        validador.validarResposta(0, questao2);
+        // Mostrará 5 questões com o titulo: "Dificuldade: fácil"
+        String ResultadoCorrecao;
+        int contador = 0;
+        // Looping simples para repetir 4 vezes
+        while (contador <= 4) {
+            // Escolherá uma questão aleatória entres as fáceis
+            int QuestaoFacil = Aleatorizar.getQuestaoAleatoria("Facil");
+            // Mostrará uma Interface, pegando os dados da classe "Questões"
+            int questao = Interface.getQuestão(
+                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoFacil), "Dificuldade: Fácil",
+                    questoes.getDica(QuestaoFacil));
+            questao = Interface.getAlternativas(questoes.getAlternativaIsolada(QuestaoFacil, 0),
+                    questoes.getAlternativaIsolada(QuestaoFacil, 1), questoes.getAlternativaIsolada(QuestaoFacil, 2),
+                    questoes.getAlternativaIsolada(QuestaoFacil, 3),
+                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoFacil),
+                    "Dificuldade: Fácil");
 
-        /*
-        int questao3  = caixaDePergunta.getGui(questoes.getPergunta3(), "pergunta 3");
-        validador.validarResposta(2, questao3);
-      
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a
+            // pontuação do mesmo
+            ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoFacil), questao);
+            pontuador.setPontuaçãoUsuario(ResultadoCorrecao);
+            Aleatorizar.setContagemQuestoesRodadas(1);
+            contador++;
+        }
 
-        int questao4  = caixaDePergunta.getGui(questoes.getPergunta4(), "pergunta 4");
-        validador.validarResposta(2, questao4);
-      
+        // Mostrará 5 questões com o titulo: "Dificuldade: Média"
+        // Looping simples para repetir 4 vezes
+        while (contador <= 9) {
+            // Escolherá uma questão aleatória entres as Médias
+            int QuestaoMedia = Aleatorizar.getQuestaoAleatoria("Medio");
+            // Mostrará uma Interface, pegando os dados da classe "Questões"
+            int questao = Interface.getQuestão(
+                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoMedia), "Dificuldade: Média",
+                    questoes.getDica(QuestaoMedia));
+            questao = Interface.getAlternativas(questoes.getAlternativaIsolada(QuestaoMedia, 0),
+                    questoes.getAlternativaIsolada(QuestaoMedia, 1), questoes.getAlternativaIsolada(QuestaoMedia, 2),
+                    questoes.getAlternativaIsolada(QuestaoMedia, 3),
+                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoMedia),
+                    "Dificuldade: Média");
 
-        int questao5  = caixaDePergunta.getGui(questoes.getPergunta5(), "pergunta 5");
-        validador.validarResposta(3, questao5);
-      
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a
+            // pontuação do mesmo
+            ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoMedia), questao);
+            pontuador.setPontuaçãoUsuario(ResultadoCorrecao);
+            Aleatorizar.setContagemQuestoesRodadas(1);
+            contador++;
+        }
 
-        int questao6  = caixaDePergunta.getGui(questoes.getPergunta6(), "pergunta 6");
-        validador.validarResposta(0, questao6);
-        
+        // Mostrará 5 questões com o titulo: "Dificuldade: Dificil"
+        // Looping simples para repetir 4 vezes
+        while (contador <= 14) {
+            // Escolherá uma questão aleatória entres as Dificeis
+            int QuestaoDificil = Aleatorizar.getQuestaoAleatoria("Dificil");
+            // Mostrará uma Interface, pegando os dados da classe "Questões"
+            int questao = Interface.getQuestão(
+                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil),
+                    "Dificuldade: Dificil", questoes.getDica(QuestaoDificil));
+            questao = Interface.getAlternativas(questoes.getAlternativaIsolada(QuestaoDificil, 0),
+                    questoes.getAlternativaIsolada(QuestaoDificil, 1),
+                    questoes.getAlternativaIsolada(QuestaoDificil, 2),
+                    questoes.getAlternativaIsolada(QuestaoDificil, 3),
+                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil),
+                    "Dificuldade: Dificil");
 
-        int questao7  = caixaDePergunta.getGui(questoes.getPergunta7(), "pergunta 7");
-        validador.validarResposta(1, questao7);
-       
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a
+            // pontuação do mesmo
 
-        int questao8  = caixaDePergunta.getGui(questoes.getPergunta8(), "pergunta 8");
-        validador.validarResposta(3, questao8);
+            ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoDificil), questao);
+            pontuador.setPontuaçãoUsuario(ResultadoCorrecao);
+            Aleatorizar.setContagemQuestoesRodadas(1);
+            contador++;
+        }
 
+        // Mensagem de despedida dizendo a quantidade de acertos.
+        // fazer um metodo na classe gui de despedidas, para fazer o chamado por aqui no
+        // main e substituir o codigo abaixo
+        JOptionPane.showMessageDialog(null,
+                "Parabéns " + nome + ", por chegar ao fim deste quiz! \nVocê acertou um total de "
+                        + pontuador.getPontuaçãoUsuario() + "/15 perguntas");
 
-        int questao9  = caixaDePergunta.getGui(questoes.getPergunta9(), "pergunta 9");
-        validador.validarResposta(1, questao9);
-
-
-        int questao10  = caixaDePergunta.getGui(questoes.getPergunta10(), "pergunta 10");
-        validador.validarResposta(0, questao10);
-        
-
-        int questao11  = caixaDePergunta.getGui(questoes.getPergunta11(), "pergunta 11");
-        validador.validarResposta(2, questao11);
-       
-
-        // Armazenará as respostas do usuário, para contabilizar quantos acertos teve.
-        int pontuadorTotal = pontuador.pontuacao(
-            new int[] {questao1, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11 },
-            new int[] {2, 0, 2, 3, 1, 3, 1, 0, 1, 0, 2, 3, 0, 0, 2, 1, 0, 2, 3, 2, 0, 1, 1, 0, 3, 2, 1, 2, 1, 3}
-            );
-        
-        JOptionPane.showMessageDialog(null, "Parabéns " + nome + " por chegar ao fim deste quiz! \nVocê acertou um total de " + pontuadorTotal + "/11 perguntas");
-        */
     }
 }
