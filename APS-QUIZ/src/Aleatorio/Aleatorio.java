@@ -3,7 +3,12 @@ package Aleatorio;
 import java.util.Random;
 import java.util.Arrays;
 
+import textos.Questoes;
+
 public class Aleatorio {
+    Questoes questoes = new Questoes();
+    
+    
     private int[] questoesRodadas;
     private int contagemQuestoesRodadas = 1;
     
@@ -67,7 +72,6 @@ public class Aleatorio {
     
     
     public void setAlternativasAleatorias(){
-        
         //Looping simples de 4 repetições
         for (int i = 0; i < 4; i++) {
             do{
@@ -86,6 +90,16 @@ public class Aleatorio {
     
     public int getAlternativaAleatoria(int numeroAlternativa){
         return AlternativasEscolhidas[numeroAlternativa];
+    }
+    
+    
+    public String getTodasAlternativasEscolhidas(int QuestaoFacil){
+    
+        return 
+        "\na) "+questoes.getAlternativaIsolada(QuestaoFacil,getAlternativaAleatoria(0))+
+        "\nb) "+ questoes.getAlternativaIsolada(QuestaoFacil,getAlternativaAleatoria(1))+ 
+        "\nc) "+ questoes.getAlternativaIsolada(QuestaoFacil,getAlternativaAleatoria(2))+
+        "\nd) "+ questoes.getAlternativaIsolada(QuestaoFacil,getAlternativaAleatoria(3));
     }
     
     

@@ -33,9 +33,9 @@ public class App {
             Aleatorizar.setAlternativasAleatorias();
             
             //Mostrará uma Interface, pegando os dados da classe "Questões"
-            int questao  = Interface.getQuestão(Aleatorizar.getContagemQuestoesRodadas()+ questoes.getPergunta(QuestaoFacil) , "Dificuldade: Fácil",questoes.getDica(QuestaoFacil));
+            int questao  = Interface.getQuestão(Aleatorizar.getContagemQuestoesRodadas()+ questoes.getPergunta(QuestaoFacil) + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoFacil), "Dificuldade: Fácil",questoes.getDica(QuestaoFacil));
             questao = Interface.getAlternativas(questoes.getAlternativaIsolada(QuestaoFacil,Aleatorizar.getAlternativaAleatoria(0)), questoes.getAlternativaIsolada(QuestaoFacil,Aleatorizar.getAlternativaAleatoria(1)), questoes.getAlternativaIsolada(QuestaoFacil,Aleatorizar.getAlternativaAleatoria(2)), questoes.getAlternativaIsolada(QuestaoFacil,Aleatorizar.getAlternativaAleatoria(3)), Aleatorizar.getContagemQuestoesRodadas()+questoes.getPergunta(QuestaoFacil),"Dificuldade: Fácil");
-            
+                
             
             // Aqui estamos analisando se o usuario acertou a questão, e atualizando a pontuação do mesmo
             ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoFacil), questoes.getAlternativaIsolada(QuestaoFacil,Aleatorizar.getAlternativaAleatoria(questao)));
@@ -55,11 +55,7 @@ public class App {
             Aleatorizar.setAlternativasAleatorias();
             
             //Mostrará uma Interface, pegando os dados da classe "Questões"
-            int questao  = Interface.getQuestão(Aleatorizar.getContagemQuestoesRodadas()+ questoes.getPergunta(QuestaoMedia), "Dificuldade: Média",questoes.getDica(QuestaoMedia));
-            System.out.println(Aleatorizar.getAlternativaAleatoria(0));
-            System.out.println(Aleatorizar.getAlternativaAleatoria(1));
-            System.out.println(Aleatorizar.getAlternativaAleatoria(2));
-            System.out.println(Aleatorizar.getAlternativaAleatoria(3));
+            int questao  = Interface.getQuestão(Aleatorizar.getContagemQuestoesRodadas()+ questoes.getPergunta(QuestaoMedia) + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoMedia), "Dificuldade: Média",questoes.getDica(QuestaoMedia));
             questao = Interface.getAlternativas(questoes.getAlternativaIsolada(QuestaoMedia,Aleatorizar.getAlternativaAleatoria(0)), questoes.getAlternativaIsolada(QuestaoMedia,Aleatorizar.getAlternativaAleatoria(1)), questoes.getAlternativaIsolada(QuestaoMedia,Aleatorizar.getAlternativaAleatoria(2)), questoes.getAlternativaIsolada(QuestaoMedia,Aleatorizar.getAlternativaAleatoria(3)), Aleatorizar.getContagemQuestoesRodadas()+questoes.getPergunta(QuestaoMedia),"Dificuldade: Média");
             
             
@@ -81,7 +77,7 @@ public class App {
             Aleatorizar.setAlternativasAleatorias();
             
             //Mostrará uma Interface, pegando os dados da classe "Questões"
-            int questao  = Interface.getQuestão(Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil), "Dificuldade: Dificil",questoes.getDica(QuestaoDificil));
+            int questao  = Interface.getQuestão(Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil) + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoDificil), "Dificuldade: Dificil",questoes.getDica(QuestaoDificil));
             questao = Interface.getAlternativas(questoes.getAlternativaIsolada(QuestaoDificil,Aleatorizar.getAlternativaAleatoria(0)), questoes.getAlternativaIsolada(QuestaoDificil,Aleatorizar.getAlternativaAleatoria(1)), questoes.getAlternativaIsolada(QuestaoDificil,Aleatorizar.getAlternativaAleatoria(2)), questoes.getAlternativaIsolada(QuestaoDificil,Aleatorizar.getAlternativaAleatoria(3)), Aleatorizar.getContagemQuestoesRodadas()+questoes.getPergunta(QuestaoDificil),"Dificuldade: Dificil");
             
             
