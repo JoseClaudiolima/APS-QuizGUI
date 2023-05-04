@@ -4,21 +4,26 @@ import java.util.Random;
 import java.util.Arrays;
 
 public class Aleatorio {
-    private int[] questoesRodadas = new int[30];
+    private int[] questoesRodadas;
     private int contagemQuestoesRodadas = 1;
     
     Random random = new Random();
     private int numeroAleatorio;
     private int range;
     
+    private int[] AlternativasEscolhidas;
+    
     
     
     //Método Construtor
     //Preenche toda a array com -1
-    //Isso pois quando era gerado aleatoriamente a questao 0 (a primeira questao) estava dando conflito com "new int[30]" que já colocava as 30 questões como 0
+    //Isso pois quando era gerado aleatoriamente a questao 0 (a primeira questao) estava dando conflito com "new int[15]" que já colocava as 15 questões como 0
     public Aleatorio() {
-        this.questoesRodadas = new int[30];
-        Arrays.fill(questoesRodadas, -1); 
+        this.questoesRodadas = new int[15];
+        Arrays.fill(questoesRodadas, -1);
+        
+        this.AlternativasEscolhidas = new int[4];
+        Arrays.fill(AlternativasEscolhidas, -1);
     }
     
     
@@ -39,13 +44,10 @@ public class Aleatorio {
         //Aqui gerará um numero da questão aleatório enquanto esse numero não for igual ao outros anteriores escolhidos, isso é para a questão não ser repetida várias vezes por razão de ter pego de forma aleatória.
         do{
             numeroAleatorio = random.nextInt(10) + range; // Gera um número aleatório entre 0 e 9
-            System.out.println("Gerando número aleatório...");
-        } while(verificaçãoDeQuestõesRodadas(numeroAleatorio));     
+        } while(verificaçãoDeQuestõesRodadasEAlternativasEscolhidas(numeroAleatorio,questoesRodadas));     
             
         //Abaixo, Armazenará a questão escolhida a uma lista, na ordem que foram escolhidas
         setQuestoesRodadas(getContagemQuestoesRodadas()-1,numeroAleatorio);
-        System.out.println(numeroAleatorio);
-        System.out.println(Arrays.toString(questoesRodadas));
         return numeroAleatorio; 
     }   
     
@@ -64,12 +66,35 @@ public class Aleatorio {
     }
     
     
+    public void setAlternativasAleatorias(){
+        
+        //Looping simples de 4 repetições
+        for (int i = 0; i < 4; i++) {
+            do{
+                numeroAleatorio = random.nextInt(4); // Gera um número aleatório entre 0 e 3
+            } while(verificaçãoDeQuestõesRodadasEAlternativasEscolhidas(numeroAleatorio,AlternativasEscolhidas));
+            AlternativasEscolhidas[i] = numeroAleatorio;
+            System.out.println("Numero aleatorio gerado: "+numeroAleatorio);
+        }
+    }
+    
+    public void setAlternativasAleatorias(String pedido){
+        if (pedido.equals("Resetar")){
+            Arrays.fill(AlternativasEscolhidas, -1);
+        }
+    }
+    
+    public int getAlternativaAleatoria(int numeroAlternativa){
+        return AlternativasEscolhidas[numeroAlternativa];
+    }
+    
+    
     
     //Esse método verifica se a questão escolhida pelo método aleatório já foi escolhida ou não
     //Retornando true caso já foi escolhida, ou false caso não foi escolhida
-    public boolean verificaçãoDeQuestõesRodadas(int valor){
-        for (int i = 0; i < questoesRodadas.length; i++) {
-            if (questoesRodadas[i] == valor) {
+    public boolean verificaçãoDeQuestõesRodadasEAlternativasEscolhidas(int valor,int[] array){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == valor) {
                 return true;
             } 
         }   return false;

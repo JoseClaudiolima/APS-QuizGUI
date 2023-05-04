@@ -70,7 +70,7 @@ public class Questoes {
    /*1*/{"~ 1500 anos", "~ 3000 anos", "~ 4000 anos", "Nenhuma das anteriores"},
         {"Pau-Brasil", "Cana-de-Açúcar", "Melaço", "Ouro"},
         {"Babuíno", "Lobo", "Hiena", "Leão"},
-        {"Preto, branco, amarelo, vermelho e roxo","Vermelho, amarelo, rosa, laranja e azul","Vermelho, Marrom, verde, amarelo e azul","Vermelho, amarelo, verde, marrom e azul."},
+        {"Preto, branco, amarelo, vermelho e roxo","Vermelho, amarelo, rosa, laranja e azul","Vermelho, Marrom, verde, amarelo e azul","Vermelho, amarelo, verde, marrom e azul"},
         {"Televisão", "Chuveiro", "Geladeira", "Máquina de lavar"},
         {"12%", "6%", "3%", "1%"},
         {"Juntar todo o lixo", "Separar o lixo orgânico do seco", "Desfazer-se apenas do lixo orgânico", "Desfazer-se apenas do lixo seco"},
