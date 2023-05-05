@@ -11,7 +11,7 @@ public class Pontuador {
 /* 6 a 10 */ "1%", "Separar o lixo orgânico do seco", "Aquíferos", "Baleia-azul", "Tubarão-da-Groenlândia",
 /* 11 a 15 */ "Vênus", "O³ - Oxigênio tri-atômico", "Fotossíntese e clorofila", "Pegada de Carbono", "Solar",
 /* 16 a 20 */ "Selando o material e armazenando-o em locais revestidos por concreto, longe de seres vivos", "Cerrado e Mata Atlântica", "Lâmpadas fluorescentes, baterias e seringas", "Antártica", "Tardígrados",
-/* 21 a 25 */ "CO2 - Dióxido de Carbono, CH4 - Metano, N2O - Óxido Nitroso", "Lixiviação", "10000", "Amazônia", "Agenda 21",
+/* 21 a 25 */ "CO2 - Dióxido de Carbono, CH4 - Metano, N2O - Óxido Nitroso", "Lixiviação", "10100", "Amazônia", "Agenda 21",
 /* 26 a 30 */ "Local com pouquíssima umidade e raras chuvas", "Inclinação terrestre", "Aranha, ácaro e formiga", "Borboleta, morcego e lêmure", "Lahore, Paquistão"
             };
     

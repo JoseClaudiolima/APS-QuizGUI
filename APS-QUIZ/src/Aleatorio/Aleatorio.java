@@ -21,7 +21,7 @@ public class Aleatorio {
     //Preenche toda a array (questoesRodadas e AlternativasEscolhidas) e com -1
     //Isso pois quando era gerado aleatoriamente a questao 0 (a primeira questao) estava dando conflito com "new int[15]" que já colocava as 15 questões como 0. O mesmo com a array de alternativas
     public Aleatorio() {
-        this.questoesRodadas = new int[15];
+        this.questoesRodadas = new int[30];
         Arrays.fill(questoesRodadas, -1);
         
         this.AlternativasEscolhidas = new int[4];
@@ -33,9 +33,9 @@ public class Aleatorio {
     public int getQuestaoAleatoria(String Dificuldade) {
         
         //De acordo com a dificuldade, o range muda, por exemplo: Questões fáceis estão entre a 1° e a 10° questão, e as Díficeis entre a 20° e a 30°
-        if (Dificuldade.equals("Facil")){
+        if (Dificuldade.equals("Fácil")){
              range = 0;
-        }else if (Dificuldade.equals("Medio")){
+        }else if (Dificuldade.equals("Médio")){
              range = 10;
         }else if(Dificuldade.equals("Dificil")){
              range = 20;

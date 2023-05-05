@@ -4,7 +4,7 @@ public class Questoes {
 
     // Aqui estao armazenadas todas as perguntas do Quiz.
     private String[] todasPerguntas = {
-/* Fáceis */". Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
+/* Fáceis */". Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor?",
 
             ". Mesmo sendo tão importante, o ser humano insiste em destruir um patrimônio tão relevante para o mundo: a floresta.\nO desmatamento de áreas florestais é algo que acompanha o Brasil há séculos, e persiste forte até os dias atuais.\nNa época pré-colonial, quando a economia engatinhava por aqui, o desmatamento começava a engatinhar igualmente, para fins econômicos e ocupacionais.\nQual foi o primeiro artigo a ser extraído?",
 

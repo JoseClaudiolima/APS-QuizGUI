@@ -9,9 +9,11 @@ public class App {
                 //Mostrará a questão ao usuário, com interface
                 jogo.inicio();
                 
-                //Esse método mostra a interface com as alternativas do quiz
+                //Esse método mostra a interface com as alternativas do quiz, de acordo com a dificuldade
                 //o usuário responderá com a que achar correta
-                jogo.Jogar();
+                jogo.Jogar("Fácil");
+                jogo.Jogar("Médio");
+                jogo.Jogar("Dificil");
                 
                 //Interface de despedida, mostrando a quantidade de acertos
                 jogo.Despedida();
