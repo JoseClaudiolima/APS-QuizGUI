@@ -4,7 +4,7 @@ public class Questoes {
 
     // Aqui estao armazenadas todas as perguntas do Quiz.
     private String[] todasPerguntas = {
-            /* Fáceis */". Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
+/* Fáceis */". Jogar lixo na natureza não é nada certo, pois muito do lixo produzido pelo homem demoraria muito tempo para se decompor.\nO vidro, por exemplo, sabe quanto tempo ele demora para se decompor? \n",
 
             ". Mesmo sendo tão importante, o ser humano insiste em destruir um patrimônio tão relevante para o mundo: a floresta.\nO desmatamento de áreas florestais é algo que acompanha o Brasil há séculos, e persiste forte até os dias atuais.\nNa época pré-colonial, quando a economia engatinhava por aqui, o desmatamento começava a engatinhar igualmente, para fins econômicos e ocupacionais.\nQual foi o primeiro artigo a ser extraído?",
 
@@ -24,7 +24,7 @@ public class Questoes {
 
             ". A natureza é repleta de coisas incríveis e até malucas. Você já deve ter ouvido falar de tartarugas que vivem mais que humanos\ne árvores que vivem mais de um milênio! Na esfera da fauna, você sabe dizer qual é o animal vivo mais velho que se tem conhecimento?",
 
-            /* Médias */". Dizem que o efeito estufa é balela... Eu sei, parece bobo achar isso né? Até porque na nossa vizinhança estelar temos um ótimo exemplo\nde como a Terra pode ficar se nada for feito a respeito. Então, qual seria ele?",
+/* Médias */". Dizem que o efeito estufa é balela... Eu sei, parece bobo achar isso né? Até porque na nossa vizinhança estelar temos um ótimo exemplo\nde como a Terra pode ficar se nada for feito a respeito. Então, qual seria ele?",
 
             ". Ozônio, um gás que você já deve ter ouvido falar por fazer parte de uma camada na atmosfera, e por estar com um buraco cada vez maior,\ntem grande importância na absorção de raios UV – ultravioleta – danosos aos seres humanos, entre outras complicações.\nMas afinal, o que é de fato o ozônio?",
 
@@ -44,7 +44,7 @@ public class Questoes {
 
             ". E eu não falo que a natureza não para de impressionar? Tantos acontecimentos que nos deixam perplexos que não sei nem por onde começar. Na verdade,\neu sei sim, e quero saber se você sabe qual o animal mais resistente do planeta Terra.\nEstamos falando de ambientes extremos meu caro, ou minha cara.",
 
-            /* Dificil */". O efeito estufa, fenômeno de aquecimento acelerado da atmosfera terrestre, possui seus vilanescos causadores, os GEEs, ou gases do efeito estufa.\nO maior contribuinte nasce do uso de combustíveis fósseis e atividade industrial, mas não é necessariamente o mais potente. O segundo maior contribuinte\né mais potente e advém principalmente da extração de petróleo, carvão e atividade pecuária com uso de animais ruminantes. O terceiro maior culpado é\nainda menos contribuinte e mais potente, fruto da atividade agrícola com uso de agrotóxicos e químicos no cultivo.\nDadas as informações, quais são esses 3 GEEs, respectivamente?",
+/* Dificil */". O efeito estufa, fenômeno de aquecimento acelerado da atmosfera terrestre, possui seus vilanescos causadores, os GEEs, ou gases do efeito estufa.\nO maior contribuinte nasce do uso de combustíveis fósseis e atividade industrial, mas não é necessariamente o mais potente. O segundo maior contribuinte\né mais potente e advém principalmente da extração de petróleo, carvão e atividade pecuária com uso de animais ruminantes. O terceiro maior culpado é\nainda menos contribuinte e mais potente, fruto da atividade agrícola com uso de agrotóxicos e químicos no cultivo.\nDadas as informações, quais são esses 3 GEEs, respectivamente?",
 
             ". Qual o nome do processo que descreve um escoamento de água na camada superficial do solo, causado por intensas chuvas, que transporta os nutrientes do solo a áreas\nmais baixas, levando ao empobrecimento da terra?",
 
@@ -67,66 +67,42 @@ public class Questoes {
 
     // Está armazenada todas as alternativas do Quiz.
     private String[][] todasAlternativas = {
-            /* 1 */{ "~ 1500 anos", "~ 3000 anos", "Indeterminado", "~10000 anos" },
+    /* 1  */{ "~ 1500 anos", "~ 3000 anos", "Indeterminado", "~10000 anos" },
             { "Pau-Brasil", "Cana-de-Açúcar", "Melaço", "Ouro" },
             { "Babuíno", "Lobo", "Hiena", "Leão" },
-            { "Preto, branco, amarelo, vermelho e roxo", "Vermelho, amarelo, rosa, laranja e azul",
-                    "Vermelho, Marrom, verde, amarelo e azul",
-                    "Vermelho, amarelo, verde, marrom e azul." },
+            { "Preto, branco, amarelo, vermelho e roxo", "Vermelho, amarelo, rosa, laranja e azul", "Vermelho, Marrom, verde, amarelo e azul", "Vermelho, amarelo, verde, marrom e azul" },
             { "Televisão", "Chuveiro", "Geladeira", "Máquina de lavar" },
             { "12%", "6%", "3%", "1%" },
-            { "Juntar todo o lixo", "Separar o lixo orgânico do seco",
-                    "Desfazer-se apenas do lixo orgânico",
-                    "Desfazer-se apenas do lixo seco" },
+            { "Juntar todo o lixo", "Separar o lixo orgânico do seco", "Desfazer-se apenas do lixo orgânico", "Desfazer-se apenas do lixo seco" },
             { "Aquíferos", "Lençóis freáticos", "Gêiseres subterrâneos", "Marcas d’água" },
             { "Elefante africano", "Baleia-azul", "Tubarão-tigre", "Lula gigante" },
-            /* 10 */{ "Tubarão-da-Groenlândia", "Arara", "Jabuti", "Hipopótamo" },
+    /* 10 */{ "Tubarão-da-Groenlândia", "Arara", "Jabuti", "Hipopótamo" },
             { "Marte", "Sol", "Plutão", "Vênus" },
-            { "H³ - Hidrogênio tri-atômico", "N02 - Dióxido de Nitrogênio", "CO - Monóxido de Carbono",
-                    "O³ - Oxigênio tri-atômico" },
-            { "Fotossíntese e clorofila", "Respiração e mitocôndria", "Síntese de proteínas e lipídeos",
-                    "Nenhuma das anteriores" },
+            { "H³ - Hidrogênio tri-atômico", "N02 - Dióxido de Nitrogênio", "CO - Monóxido de Carbono", "O³ - Oxigênio tri-atômico" },
+            { "Fotossíntese e clorofila", "Respiração e mitocôndria", "Síntese de proteínas e lipídeos", "Nenhuma das anteriores" },
             { "Pegada de Carbono", "Carbono zero", "Aspecto do Carbono", "Sustentabilidade" },
             { "Hidrelétrica", "Biomassa", "Solar", "Eólica" },
-            { "Selando o material e lançando no espaço",
-                    "Selando o material e armazenando-o em locais revestidos por concreto, longe de seres vivos",
-                    "Selando o material e armazenando-o no fundo do mar",
-                    "Descartando o material em locais abertos, mas sem cobertura animal ou vegetal" },
-            { "Cerrado e Mata Atlântica", "Caatinga e Mata Atlântica", "Cerrado e Pampa",
-                    "Pantanal e Caatinga" },
-            { "Seringas, latas de alumínio e lâmpadas incandescentes",
-                    "Embalagens, baterias e pratos quebrados",
-                    "Lâmpadas fluorescentes, baterias e seringas",
-                    "Embalagens, madeira e seringas" },
+            { "Selando o material e lançando no espaço", "Selando o material e armazenando-o em locais revestidos por concreto, longe de seres vivos", "Selando o material e armazenando-o no fundo do mar", "Descartando o material em locais abertos, mas sem cobertura animal ou vegetal" },
+            { "Cerrado e Mata Atlântica", "Caatinga e Mata Atlântica", "Cerrado e Pampa", "Pantanal e Caatinga" },
+            { "Seringas, latas de alumínio e lâmpadas incandescentes", "Embalagens, baterias e pratos quebrados", "Lâmpadas fluorescentes, baterias e seringas", "Embalagens, madeira e seringas" },
             { "Saara", "Atacama", "Deserto da Arábia", "Antártica" },
-            /* 20 */{ "Lesmas", "Vírus", "Tardígrados", "Água-viva" },
-            { "CO2 - Dióxido de Carbono, CH4 - Metano, N2O - Óxido Nitroso",
-                    "SO2 - Dióxido de Enxofre, NOx - Óxidos de Nitrogênio, HFCs - Hidrofluorcarbonetos.",
-                    "CO - Monóxido de Carbono, CFCs - Clorofluorcarbonetos, O3 - Ozônio",
-                    "NH3 - Amônia, VOCs - Compostos Orgânicos Voláteis, SF6 - Hexafluoreto de Enxofre" },
+    /* 20 */{ "Lesmas", "Vírus", "Tardígrados", "Água-viva" },
+            { "CO2 - Dióxido de Carbono, CH4 - Metano, N2O - Óxido Nitroso", "SO2 - Dióxido de Enxofre, NOx - Óxidos de Nitrogênio, HFCs - Hidrofluorcarbonetos.","CO - Monóxido de Carbono, CFCs - Clorofluorcarbonetos, O3 - Ozônio", "NH3 - Amônia, VOCs - Compostos Orgânicos Voláteis, SF6 - Hexafluoreto de Enxofre" },
             { "Infiltração hídrica", "Lixiviação", "Erosão eólica", "Capilaridade do solo" },
             { "1000", "10100", "4500", "7000" },
             { "Amazônia", "Sergipe", "São Paulo", "Mato Grosso" },
-            { "O Manifesto Ambiental", "Desenvolvendo de Forma Sustentável", "Manifesto – 92",
-                    "Agenda 21" },
-            { "Local de altas temperaturas diurnas e baixas noturnas",
-                    "Local com nenhuma umidade e formação de dunas",
-                    "Local com pouquíssima umidade e raras chuvas",
-                    "Local com ventos fortes e raras chuvas" },
-            { "Rotação e translação terrestre", "Inclinação terrestre", "Campo magnético terrestre",
-                    "Baixas e altas latitudes" },
-            { "Lesma de jardim, minhoca e iguana", "Polvo, lagostim e barata-do-mar",
-                    "Aranha, ácaro e formiga",
-                    "Planária, minhoca e formiga" },
-            { "Aranhas, beija-flor e lacraia", "Borboleta, morcego e lêmure", "Besouro, vespa e caranguejo",
-                    "Formiga, camundongo e capivara" },
-            /* 30 */{ "Cubatão, Brasil", "Hotan, China", "Delhi, Índia", "Lahore, Paquistão" },
+            { "O Manifesto Ambiental", "Desenvolvendo de Forma Sustentável", "Manifesto – 92", "Agenda 21" },
+            { "Local de altas temperaturas diurnas e baixas noturnas", "Local com nenhuma umidade e formação de dunas", "Local com pouquíssima umidade e raras chuvas", "Local com ventos fortes e raras chuvas" },
+            { "Rotação e translação terrestre", "Inclinação terrestre", "Campo magnético terrestre", "Baixas e altas latitudes" },
+            { "Lesma de jardim, minhoca e iguana", "Polvo, lagostim e barata-do-mar", "Aranha, ácaro e formiga", "Planária, minhoca e formiga" },
+            { "Aranhas, beija-flor e lacraia", "Borboleta, morcego e lêmure", "Besouro, vespa e caranguejo", "Formiga, camundongo e capivara" },
+    /* 30 */{ "Cubatão, Brasil", "Hotan, China", "Delhi, Índia", "Lahore, Paquistão" },
 
     };
 
     // Abaixo, está armazenado todas as dicas de todas as Questões dos Quiz
     private String[] todasDicas = {
-            /* 1 */"O vidro é decomposto por ação do tempo, não põe microrganismos, e isso demora...",
+    /* 1 */"O vidro é decomposto por ação do tempo, não põe microrganismos, e isso demora...",
             "Produto agrícola que caracterizou a país, foi uma alternativa econômica aos portugueses que não encontraram nada muito interessante por aqui\nem sua primeira visita, nada como as especiarias orientais.\nPosteriormente a cana-de-açúcar se tornou o foco das atividades agrícolas.",
             "Ardilosos e aproveitadores, estes animais conseguem brigar pelo alimento de animais maiores, em bando como de costume ou até solitários.",
             "O vidro se refere ao verde, o orgânico ao marrom e o metal ao amarelo.",
@@ -135,7 +111,7 @@ public class Questoes {
             "Algo simples que qualquer um pode fazer na hora de recolher seu lixo não o misturar de qualquer jeito.",
             "Diferente dos lençóis d’água, estes locais de baixo da terra são como grandes armazéns naturais de água e representam grandes quantidades\n da já escassa água doce consumível do globo. O Brasil possui alguns dos maiores “armazéns” do mundo.",
             "Este animal chega a pesar 180 toneladas, é um mamífero e não são terrestres!",
-            /* 10 */"Predadores aquáticos de águas abissais, estes animais impressionam tanto pela idade média de vida, de 270 anos, quanto pela bizarrice\nem volta de seu habitat e, consequentemente, de sua aparência. O mais velho de todos possui 390 anos de vida!",
+    /* 10 */"Predadores aquáticos de águas abissais, estes animais impressionam tanto pela idade média de vida, de 270 anos, quanto pela bizarrice\nem volta de seu habitat e, consequentemente, de sua aparência. O mais velho de todos possui 390 anos de vida!",
             "Um dos planetas com uma das mais densas atmosferas no Sistema Solar, este planeta em certas épocas é o objeto mais brilhante no céu noturno\nalém da Lua, e é conhecido também por Estrela D’Alva.",
             "A adição de um único átomo à molécula deste gás e ele passa de essencial para tóxico a nós seres humanos.",
             "A luz é captada em estruturas chamadas cloroplastos, que contém um pigmento responsável por captar a luz.",
@@ -145,7 +121,7 @@ public class Questoes {
             "O primeiro bioma a ser colonizado foi a Mata Atlântica, e desde lá foi muito devastada com o tempo, sendo hoje o mais habitado dos biomas. O outro Hotspot é o\nsegundo maior bioma brasileiro e na seca possui queimadas naturais, que ajudam na germinação. Muitas queimadas são obra do homem, causando desequilíbrio na região.",
             "Materiais médicos e outros que podem vazar certos tipos soluções tóxicas não podem ser levados pela coleta seletiva comum. Existem locais apropriados e maneiras\ncorretas de se desfazer destes tipos de lixo, como a incineração, mas nem sempre eles podem ser reaproveitados, portanto, o descarte correto é fundamental.",
             "Quando se fala de desertos, nem sempre o clima quente, o Sol escaldante e dunas de areia definem um deserto.",
-            /* 20 */"Estes animais foram ao vácuo do espaço, expostos a altas radiações e baixíssimas temperaturas, e retornaram com vida. São capazes de sobreviver a altas\nou baixas temperaturas, nos ambientes mais inóspitos, devido a sua capacidade de se enrolar e “hibernar”, protegidos por membranas proteicas poderosas,\nna falta de umidade, seu local ideal. Durante essa hibernação, suas atividades metabólicas cessam, e podem “sobreviver” assim por anos, até as condições\\nserem viáveis novamente.",
+    /* 20 */"Estes animais foram ao vácuo do espaço, expostos a altas radiações e baixíssimas temperaturas, e retornaram com vida. São capazes de sobreviver a altas\nou baixas temperaturas, nos ambientes mais inóspitos, devido a sua capacidade de se enrolar e “hibernar”, protegidos por membranas proteicas poderosas,\nna falta de umidade, seu local ideal. Durante essa hibernação, suas atividades metabólicas cessam, e podem “sobreviver” assim por anos, até as condições\\nserem viáveis novamente.",
             "O carbono é o principal vilão quando se fala em efeito estufa. Toneladas e toneladas são lançadas no ar por atividades industriais diversas.\nAlém dele, o nitrogênio é um gás muito recorrente em atividades agrícolas e de grande importância para o solo, mas seu uso em químicos acarreta\nem reações do nitrogênio com o oxigênio no subsolo, resultando em GEEs.",
             "A Amazônia é uma grande floresta equatorial, o que significa que em todo o ano o clima é quente e chuvoso, pela incidência de luz solar constante.\nA superfície da terra é rica de matéria orgânica produzida por toda a fauna e flora da região, e mesmo assim seu solo é pobre, pois toda essa matéria\norgânica é levada pela chuva para regiões baixas, até tudo escoar nos rios, como uma lavagem.",
             "Hoje, a quantidade em toneladas de lixo espacial está entre 5000 a 10100 toneladas, gerados de mais de 6250 lançamentos que colocaram cerca de 13500 satélites\nna órbita terrestre, desde a Sputnik 1 em 1957.",
@@ -155,7 +131,7 @@ public class Questoes {
             "Equinócios de outono e primavera são as únicas duas datas do ano onde a incidência solar é igual para ambos os hemisférios, onde o Sol faz um ângulo reto perfeito com\na Linha do Equador. Os solstícios marcam o extremo oposto: enquanto o dia é maior em um hemisfério, no outro a noite é maior. Quanto mais se distanciar da Linha do\nEquador, mais forte será o efeito nessas épocas.",
             "Caranguejos são artrópodes, logo, são invertebrados e possuem uma dura carapaça feita de queratina, que a medida de seu crescimento o caranguejo precisa\ntroca-la para acompanhar seu tamanho. Além disso, os animais de sua classe, os crustáceos, possuem 10 patas e pares de antenas.",
             "Os principais animais polinizadores são insetos, mas não se restringem apenas a eles, dependendo de seu hábito e sua dieta.\nAlgumas aves, além dos beija-flores, e mamíferos, como os primatas residentes de Madagascar, podem exercer tal função.",
-            /* 30 */"País oriental, onde muitas outras cidades acompanham os altos índices de poluição no ar. A cidade em questão fica perto da fronteira com a Índia\ne já foi a capital do Império Mongol.",
+    /* 30 */"País oriental, onde muitas outras cidades acompanham os altos índices de poluição no ar. A cidade em questão fica perto da fronteira com a Índia\ne já foi a capital do Império Mongol.",
     };
 
     // Esse metódo retornará a dica da questão que for desejada.

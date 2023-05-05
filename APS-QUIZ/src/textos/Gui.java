@@ -1,47 +1,55 @@
 package textos;
 
+//Importamos todas as utilizades do javax.swing que iremos utilizar para fazer a interface GUI
 import javax.swing.JOptionPane;
-import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JRadioButton;
-import Aleatorio.Aleatorio;
-import conferencia.Conferencia;
-import pontuador.Pontuador;
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
+import java.awt.image.BufferedImage;
+
+//Importará as classes para serem utilizadas nessa
+import Aleatorio.Aleatorio;
+import conferencia.Conferencia;
+import pontuador.Pontuador;
+
 
 public class Gui {
+ 
+    // Criando novos objetos
+    Aleatorio Aleatorizar = new Aleatorio();
+    Questoes questoes = new Questoes();
+    Conferencia validador = new Conferencia();
+    Pontuador pontuador = new Pontuador();
+    
     private int option;
     private int numDica;
     private String nome;
-    static Aleatorio Aleatorizar = new Aleatorio();
-    static Questoes questoes = new Questoes();
-    static Gui Interface = new Gui();
-    static Conferencia validador = new Conferencia();
-    static Pontuador pontuador = new Pontuador();
+    
 
-    public String obterNome() {
-        nome = JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza:", "BEM VINDO!!!",
-                JOptionPane.PLAIN_MESSAGE, null, null, "").toString();
-        return nome;
-
+    //Esse método cria uma interface em que pergunta ao usuário o seu nome, e retorna esse informação
+    public void obterNome() {
+        nome = JOptionPane.showInputDialog(null, "Seja bem vindo ao nosso quiz, digite o seu nome abaixo: ", "Quiz",
+     JOptionPane.PLAIN_MESSAGE, null, null, "").toString();
     }
 
-    public void desafio() {
-
+    
+    //O método abaixo, mostra uma interface para instigar o usuário e dizer que o jogo irá começar
+    public void inicio() {
         JOptionPane.showMessageDialog(null, "Olá " + nome +
-                ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!",
-                "DESAFIO!", JOptionPane.PLAIN_MESSAGE, null);
+        ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!",
+   "Quiz", JOptionPane.PLAIN_MESSAGE, null);
     }
 
+    
     public void Jogar() {
         String ResultadoCorrecao;
         int contador = 0;
         // Mostrará 5 questões com o titulo: "Dificuldade: fácil"
         // Looping simples para repetir 5 vezes
-        while (contador <= 4) {// 4
+        while (contador <= 4) {
 
             // Escolherá uma questão aleatória entres as fáceis
             int QuestaoFacil = Aleatorizar.getQuestaoAleatoria("Facil");
@@ -49,31 +57,45 @@ public class Gui {
             Aleatorizar.setAlternativasAleatorias();
 
             // Mostrará uma Interface, pegando os dados da classe "Questões"
-            int questao = Interface.getQuestão(
-                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoFacil)
-                            + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoFacil),
-                    "Dificuldade: Fácil", questoes.getDica(QuestaoFacil));
-            questao = Interface.getAlternativas(
+            // Neste Acionamento de "getQuestão", retornará uma questão aleatória fácil em forma de interface (JOptionPane.showOptionDialog)
+            int questao = getQuestão(
+                Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoFacil)
+                + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoFacil),
+                "Dificuldade: Fácil", questoes.getDica(QuestaoFacil));
+            
+            
+            //No acionamento de "getAlternativas()", será mostrado toda a interface da questão pronta para receber a resposta do usuário
+            //Nota-se que os argumentos colocados foram:
+            //1. as 4 alternativas (aleatorizadas), 2. a contagem da questão (para mostrar na tela se é a 1° ou 5° questao)
+            //3. o texto da pergunta em si, 4. o titulo mostrado na interface
+            questao = getAlternativas(
                     questoes.getAlternativaIsolada(QuestaoFacil, Aleatorizar.getAlternativaAleatoria(0)),
                     questoes.getAlternativaIsolada(QuestaoFacil, Aleatorizar.getAlternativaAleatoria(1)),
                     questoes.getAlternativaIsolada(QuestaoFacil, Aleatorizar.getAlternativaAleatoria(2)),
                     questoes.getAlternativaIsolada(QuestaoFacil, Aleatorizar.getAlternativaAleatoria(3)),
-                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoFacil),
+                     Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoFacil),
                     "Dificuldade: Fácil");
 
-            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a
-            // pontuação do mesmo
+                
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a pontuação do mesmo, pelo método "validarResposta()"
+            //Nota-se que os argumentos colocados foram:
+            //1. o texto da resposta correta
+            //2. o texto da resposta escolhida pelo usuário
+            //Porém para selecionar 1. e 2., foi necessário utilizar vários outros métodos, isso pois as alternativas estão aleatórias, exige uma complexidade maior para selecionar o texto correto e selecionado pelo usuário
             ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoFacil),
-                    questoes.getAlternativaIsolada(QuestaoFacil, Aleatorizar.getAlternativaAleatoria(questao)));
+            questoes.getAlternativaIsolada(QuestaoFacil, Aleatorizar.getAlternativaAleatoria(questao)));
+            
             pontuador.setPontuaçãoUsuario(ResultadoCorrecao);
             Aleatorizar.setContagemQuestoesRodadas(1);
             Aleatorizar.setAlternativasAleatorias("Resetar");
             contador++;
         }
 
+        
+        
         // Mostrará 5 questões com o titulo: "Dificuldade: Média"
         // Looping simples para repetir 5 vezes
-        while (contador <= 9) {// 9
+        while (contador <= 9) {
 
             // Escolherá uma questão aleatória entres as Médias
             int QuestaoMedia = Aleatorizar.getQuestaoAleatoria("Medio");
@@ -81,11 +103,18 @@ public class Gui {
             Aleatorizar.setAlternativasAleatorias();
 
             // Mostrará uma Interface, pegando os dados da classe "Questões"
-            int questao = Interface.getQuestão(
-                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoMedia)
-                            + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoMedia),
-                    "Dificuldade: Média", questoes.getDica(QuestaoMedia));
-            questao = Interface.getAlternativas(
+            // Neste Acionamento de "getQuestão", retornará uma questão aleatória fácil em forma de interface (JOptionPane.showOptionDialog)
+            int questao = getQuestão(
+                Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoMedia)
+                + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoMedia),
+                "Dificuldade: Média", questoes.getDica(QuestaoMedia));
+            
+            
+            //No acionamento de "getAlternativas()", será mostrado toda a interface da questão pronta para receber a resposta do usuário
+            //Nota-se que os argumentos colocados foram:
+            //1. as 4 alternativas (aleatorizadas), 2. a contagem da questão (para mostrar na tela se é a 1° ou 5° questao)
+            //3. o texto da pergunta em si, 4. o titulo mostrado na interface
+            questao = getAlternativas(
                     questoes.getAlternativaIsolada(QuestaoMedia, Aleatorizar.getAlternativaAleatoria(0)),
                     questoes.getAlternativaIsolada(QuestaoMedia, Aleatorizar.getAlternativaAleatoria(1)),
                     questoes.getAlternativaIsolada(QuestaoMedia, Aleatorizar.getAlternativaAleatoria(2)),
@@ -93,19 +122,26 @@ public class Gui {
                     Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoMedia),
                     "Dificuldade: Média");
 
-            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a
-            // pontuação do mesmo
+            
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a pontuação do mesmo, pelo método "validarResposta()"
+            //Nota-se que os argumentos colocados foram:
+            //1. o texto da resposta correta
+            //2. o texto da resposta escolhida pelo usuário
+            //Porém para selecionar 1. e 2., foi necessário utilizar vários outros métodos, isso pois as alternativas estão aleatórias, exige uma complexidade maior para selecionar o texto correto e selecionado pelo usuário
             ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoMedia),
-                    questoes.getAlternativaIsolada(QuestaoMedia, Aleatorizar.getAlternativaAleatoria(questao)));
+            questoes.getAlternativaIsolada(QuestaoMedia, Aleatorizar.getAlternativaAleatoria(questao)));
+            
             pontuador.setPontuaçãoUsuario(ResultadoCorrecao);
             Aleatorizar.setContagemQuestoesRodadas(1);
             Aleatorizar.setAlternativasAleatorias("Resetar");
             contador++;
         }
 
+        
+        
         // Mostrará 5 questões com o titulo: "Dificuldade: Dificil"
         // Looping simples para repetir 5 vezes
-        while (contador <= 14) {// 14
+        while (contador <= 14) {
 
             // Escolherá uma questão aleatória entres as Dificeis
             int QuestaoDificil = Aleatorizar.getQuestaoAleatoria("Dificil");
@@ -113,22 +149,34 @@ public class Gui {
             Aleatorizar.setAlternativasAleatorias();
 
             // Mostrará uma Interface, pegando os dados da classe "Questões"
-            int questao = Interface.getQuestão(
-                    Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil)
-                            + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoDificil),
-                    "Dificuldade: Dificil", questoes.getDica(QuestaoDificil));
-            questao = Interface.getAlternativas(
+            // Neste Acionamento de "getQuestão", retornará uma questão aleatória fácil em forma de interface (JOptionPane.showOptionDialog)
+            int questao = getQuestão(
+                Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil)
+                + Aleatorizar.getTodasAlternativasEscolhidas(QuestaoDificil),
+                "Dificuldade: Dificil", questoes.getDica(QuestaoDificil));
+            
+            
+            //No acionamento de "getAlternativas()", será mostrado toda a interface da questão pronta para receber a resposta do usuário
+            //Nota-se que os argumentos colocados foram:
+            //1. as 4 alternativas (aleatorizadas), 2. a contagem da questão (para mostrar na tela se é a 1° ou 5° questao)
+            //3. o texto da pergunta em si, 4. o titulo mostrado na interface
+            questao = getAlternativas(
                     questoes.getAlternativaIsolada(QuestaoDificil, Aleatorizar.getAlternativaAleatoria(0)),
                     questoes.getAlternativaIsolada(QuestaoDificil, Aleatorizar.getAlternativaAleatoria(1)),
                     questoes.getAlternativaIsolada(QuestaoDificil, Aleatorizar.getAlternativaAleatoria(2)),
                     questoes.getAlternativaIsolada(QuestaoDificil, Aleatorizar.getAlternativaAleatoria(3)),
                     Aleatorizar.getContagemQuestoesRodadas() + questoes.getPergunta(QuestaoDificil),
                     "Dificuldade: Dificil");
+            
 
-            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a
-            // pontuação do mesmo
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a pontuação do mesmo, pelo método "validarResposta()"
+            //Nota-se que os argumentos colocados foram:
+            //1. o texto da resposta correta
+            //2. o texto da resposta escolhida pelo usuário
+            //Porém para selecionar 1. e 2., foi necessário utilizar vários outros métodos, isso pois as alternativas estão aleatórias, exige uma complexidade maior para selecionar o texto correto e selecionado pelo usuário
             ResultadoCorrecao = validador.validarResposta(pontuador.getSolucaoIndividual(QuestaoDificil),
-                    questoes.getAlternativaIsolada(QuestaoDificil, Aleatorizar.getAlternativaAleatoria(questao)));
+            questoes.getAlternativaIsolada(QuestaoDificil, Aleatorizar.getAlternativaAleatoria(questao)));
+            
             pontuador.setPontuaçãoUsuario(ResultadoCorrecao);
             Aleatorizar.setContagemQuestoesRodadas(1);
             Aleatorizar.setAlternativasAleatorias("Resetar");
@@ -136,7 +184,25 @@ public class Gui {
         }
     }
 
-    // Classse criada para a estrturação da gui do projeto
+    
+    // Mensagem de despedida dizendo a quantidade de acertos, com interface simples.
+    public void Despedida() {
+        JOptionPane.showMessageDialog(null,
+                "                                                     "+
+                "Parabéns " + nome +
+                ", por chegar ao fim deste quiz! \n"+
+                "                                                     "+
+                "Você acertou um total de "
+                + pontuador.getPontuaçãoUsuario() + "/15 perguntas.\n"
+                + "Temos um total de 30 perguntas, e elas são aleatórias, jogue novamente para uma nova experiência!",
+                null, JOptionPane.PLAIN_MESSAGE);
+        
+    }
+    
+    
+    
+    
+    // O Método abaixo, é para mostrar a janela gráfica em que o usuário verá a questão e decidirá se irá gastar uma dica ou se irá responder a questão
     public int getQuestão(String pergunta, String titulo, String dica) {
         int questao;
         String[] escolhas = { "Responder a Questão", "Gastar uma dica" };
@@ -171,7 +237,7 @@ public class Gui {
             } else {
                 JOptionPane.showMessageDialog(
                         null,
-                        "Acabaram suas dicas!!!",
+                        "Acabaram suas dicas!",
                         "DICAS ESGOTADAS",
                         JOptionPane.PLAIN_MESSAGE);
             }
@@ -180,6 +246,9 @@ public class Gui {
 
     }
 
+    
+    
+    // O Método a seguir, tem como objetivo mostrar a janela gráfica em que o usuário visualizará a questão com as alternativas e decidirá qual a alternativa correta e enviará a sua resposta
     public int getAlternativas(String a, String b, String c, String d, String questao, String titulo) {
 
         // Cria um painel para os botões de opção e define o layout como BoxLayout com
@@ -246,12 +315,5 @@ public class Gui {
         return option;
     }
 
-    // Mensagem de despedida dizendo a quantidade de acertos.
-    public void Despedida() {
-        JOptionPane.showMessageDialog(null,
-                "Parabéns " + nome +
-                        ", por chegar ao fim deste quiz! \nVocê acertou um total de "
-                        + pontuador.getPontuaçãoUsuario() + "/15 perguntas",
-                null, JOptionPane.PLAIN_MESSAGE);
-    }
+
 }

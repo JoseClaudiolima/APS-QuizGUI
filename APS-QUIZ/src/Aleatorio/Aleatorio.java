@@ -7,22 +7,19 @@ import textos.Questoes;
 
 public class Aleatorio {
     Questoes questoes = new Questoes();
-    
+    Random random = new Random();
     
     private int[] questoesRodadas;
-    private int contagemQuestoesRodadas = 1;
-    
-    Random random = new Random();
-    private int numeroAleatorio;
-    private int range;
-    
     private int[] AlternativasEscolhidas;
+    private int contagemQuestoesRodadas = 1;
+    private int numeroAleatorio;
+    private int range; 
     
     
     
     //Método Construtor
-    //Preenche toda a array com -1
-    //Isso pois quando era gerado aleatoriamente a questao 0 (a primeira questao) estava dando conflito com "new int[15]" que já colocava as 15 questões como 0
+    //Preenche toda a array (questoesRodadas e AlternativasEscolhidas) e com -1
+    //Isso pois quando era gerado aleatoriamente a questao 0 (a primeira questao) estava dando conflito com "new int[15]" que já colocava as 15 questões como 0. O mesmo com a array de alternativas
     public Aleatorio() {
         this.questoesRodadas = new int[15];
         Arrays.fill(questoesRodadas, -1);
@@ -38,11 +35,9 @@ public class Aleatorio {
         //De acordo com a dificuldade, o range muda, por exemplo: Questões fáceis estão entre a 1° e a 10° questão, e as Díficeis entre a 20° e a 30°
         if (Dificuldade.equals("Facil")){
              range = 0;
-        }
-        if (Dificuldade.equals("Medio")){
+        }else if (Dificuldade.equals("Medio")){
              range = 10;
-        }
-        if(Dificuldade.equals("Dificil")){
+        }else if(Dificuldade.equals("Dificil")){
              range = 20;
         }
          
@@ -70,7 +65,7 @@ public class Aleatorio {
         this.contagemQuestoesRodadas += quantidadeQuestoesRodadas;
     }
     
-    
+    //Abaixo, ele preencherá a lista AlternativasEscolhidas[], com valores de 0 a 3, para que quando for pegar a alternativa com base no valor AlternativasEscolhidas[0], seja aleatório
     public void setAlternativasAleatorias(){
         //Looping simples de 4 repetições
         for (int i = 0; i < 4; i++) {
@@ -78,10 +73,10 @@ public class Aleatorio {
                 numeroAleatorio = random.nextInt(4); // Gera um número aleatório entre 0 e 3
             } while(verificaçãoDeQuestõesRodadasEAlternativasEscolhidas(numeroAleatorio,AlternativasEscolhidas));
             AlternativasEscolhidas[i] = numeroAleatorio;
-            System.out.println("Numero aleatorio gerado: "+numeroAleatorio);
         }
     }
     
+    //A seguir, coloca toda a lista AlternativasEscolhidas[] com valores -1, para que seja resetada
     public void setAlternativasAleatorias(String pedido){
         if (pedido.equals("Resetar")){
             Arrays.fill(AlternativasEscolhidas, -1);
@@ -92,9 +87,8 @@ public class Aleatorio {
         return AlternativasEscolhidas[numeroAlternativa];
     }
     
-    
+    //Retorna com formatação a) b) c) d), as alternativas que já foram aleatorizadas
     public String getTodasAlternativasEscolhidas(int QuestaoFacil){
-    
         return 
         "\na) "+questoes.getAlternativaIsolada(QuestaoFacil,getAlternativaAleatoria(0))+
         "\nb) "+ questoes.getAlternativaIsolada(QuestaoFacil,getAlternativaAleatoria(1))+ 
