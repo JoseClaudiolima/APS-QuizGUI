@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 public class Gui {
     private int option;
     private int numDica;
+    private String nome;
     static Aleatorio Aleatorizar = new Aleatorio();
     static Questoes questoes = new Questoes();
     static Gui Interface = new Gui();
@@ -22,17 +23,17 @@ public class Gui {
     static Pontuador pontuador = new Pontuador();
 
     public String obterNome() {
-        return JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza:", "BEM VINDO!!!",
+        nome = JOptionPane.showInputDialog(null, "Digite o seu nome, por gentileza:", "BEM VINDO!!!",
                 JOptionPane.PLAIN_MESSAGE, null, null, "").toString();
+        return nome;
+
     }
 
-    String nome;
+    public void desafio() {
 
-    public String desafio() {
         JOptionPane.showMessageDialog(null, "Olá " + nome +
                 ", você acha que sabe o bastante sobre como ajudar o meio ambiente? \nClique em ok para descobrir!",
                 "DESAFIO!", JOptionPane.PLAIN_MESSAGE, null);
-        return nome;
     }
 
     public void Jogar() {
