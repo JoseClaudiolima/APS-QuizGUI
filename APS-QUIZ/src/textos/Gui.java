@@ -77,7 +77,7 @@ public class Gui {
                     "Dificuldade: "+Dificuldade);
 
                 
-            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a pontuação do mesmo, pelo método "validarResposta()"
+            // Aqui estamos analisando se o usuario acertou a questão, e atualizando a pontuação do mesmo, respectivamente pelo método "validarResposta() e setPontuaçãoUsuario(ResultadoCorrecao)."
             //Nota-se que os argumentos colocados foram:
             //1. o texto da resposta correta
             //2. o texto da resposta escolhida pelo usuário

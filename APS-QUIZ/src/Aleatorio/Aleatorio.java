@@ -19,7 +19,7 @@ public class Aleatorio {
     
     //Método Construtor
     //Preenche toda a array (questoesRodadas e AlternativasEscolhidas) e com -1
-    //Isso pois quando era gerado aleatoriamente a questao 0 (a primeira questao) estava dando conflito com "new int[15]" que já colocava as 15 questões como 0. O mesmo com a array de alternativas
+    //Pois quando era gerado aleatoriamente a questao 0 (a primeira questao) daria um conflito com "new int[]" que já preenchia a array com 0. O mesmo com a array de alternativas
     public Aleatorio() {
         this.questoesRodadas = new int[30];
         Arrays.fill(questoesRodadas, -1);
